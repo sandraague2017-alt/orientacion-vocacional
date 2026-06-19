@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Orientacion Vocacional 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f5f5f5;color:#333;max-width:900px;margin:0 auto;line-height:1.6}
+nav{position:sticky;top:0;background:#1a5f7a;padding:12px;text-align:center;z-index:100}
+nav a{color:#fff;text-decoration:none;margin:0 10px;font-size:14px;font-weight:600}
+section{padding:30px 20px}
+h1{color:#1a5f7a;text-align:center}
+h2{color:#1a5f7a;border-bottom:2px solid #e8b923;padding-bottom:8px;margin:30px 0 15px}
+.card{background:#fff;padding:20px;border-radius:12px;margin:15px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.tag{display:inline-block;background:#1a5f7a;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:10px}
+.salary{background:#28a745;color:#fff;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:700}
+a{color:#1a5f7a;font-weight:700}
+button{background:#1a5f7a;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:15px;margin:5px}
+button:hover{background:#2a8faf}
+input,textarea,select{width:100%;padding:10px;margin:8px 0;border:2px solid #ddd;border-radius:8px;font-size:15px}
+label{font-weight:700;display:block;margin-top:15px;color:#1a5f7a}
+.progress{background:#e0e0e0;border-radius:10px;height:18px;margin:15px 0}
+.progress-fill{background:#1a5f7a;height:100%;border-radius:10px;transition:width 0.3s}
+.option-btn{width:100%;padding:12px;margin:6px 0;border:2px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;text-align:left;font-size:15px}
+.option-btn:hover{border-color:#1a5f7a;background:#f0f7fa}
+.option-btn.selected{border-color:#1a5f7a;background:#e8f4f8}
+.hidden{display:none}
+.cv-preview{background:#fff;border:2px solid #ddd;padding:25px;margin-top:15px;border-radius:10px}
+.tip{background:#e8f5e9;border:2px solid #a5d6a7;padding:15px;border-radius:10px;margin:15px 0}
+.warning{background:#fff3f0;border:2px solid #ffccbc;padding:15px;border-radius:10px;margin:15px 0}
+.hero{background:linear-gradient(135deg,#1a1a2e,#1a5f7a);color:#fff;text-align:center;padding:60px 20px}
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero h1 span{color:#e8b923}
+.quote{font-size:18px;font-weight:700;color:#1a5f7a;text-align:center;padding:25px;font-style:italic;background:#fff;border-radius:12px;margin:15px 0}
+.story{background:#fff;padding:18px;border-radius:12px;margin:15px 0;border-left:4px solid #e8b923}
+footer{background:#1a1a2e;color:#fff;text-align:center;padding:40px 20px}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#test">Test</a>
+<a href="#carreras">Carreras</a>
+<a href="#empleo">Empleo</a>
+<a href="#cv">CV</a>
+<a href="#entrevista">Entrevista</a>
+<a href="#mercado">Mercado</a>
+<a href="#motivacion">Motivacion</a>
+</nav>
+
+<div class="hero">
+<h1>El mundo te espera.<br><span>¿Estas listo?</span></h1>
+<p style="max-width:600px;margin:15px auto;opacity:0.9">Una guia honesta sobre carreras, trabajo, dinero y futuro. Para vos que terminas el secundario y empezas de cero.</p>
+<a href="#test" style="background:#e8b923;color:#1a1a2e;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin:5px">Hacer el Test</a>
+<a href="#carreras" style="background:transparent;color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin:5px;border:2px solid rgba(255,255,255,0.4)">Ver Carreras</a>
+<p style="margin-top:25px;opacity:0.8;font-size:14px"><strong>E.A. N°4-264 "Sin Nombre"</strong><br>Arroyito, Lavalle - Mendoza · 5° Año 2026</p>
+</div>
+
+<section id="test">
+<span class="tag">Test Profesional</span>
+<h2>¿Quien sos y adonde vas?</h2>
+<p>20 preguntas para identificar tu perfil real. No hay respuestas correctas.</p>
+
+<div id="testBox">
+<div class="progress"><div class="progress-fill" id="prog" style="width:5%"></div></div>
+<p id="qnum"><b>Pregunta 1 de 20</b></p>
+<p id="qtext" style="font-size:18px;font-weight:600;margin:15px 0"></p>
+<div id="qopts"></div>
+<div style="margin-top:15px">
+<button onclick="prevQ()" id="btnPrev" disabled>Anterior</button>
+<button onclick="nextQ()" id="btnNext" disabled>Siguiente</button>
+</div>
+</div>
+
+<div id="resBox" class="hidden">
+<div class="card" style="background:linear-gradient(135deg,#1a5f7a,#2a8faf);color:#fff;text-align:center">
+<h3 style="color:#e8b923">Tu perfil: <span id="resName" style="font-size:28px;display:block;margin:10px 0"></span></h3>
+<p id="resDesc"></p>
+</div>
+<h3 style="color:#1a5f7a;margin:15px 0">Puntajes:</h3>
+<div id="resScores"></div>
+<h3 style="color:#1a5f7a;margin:15px 0">Carreras recomendadas:</h3>
+<div id="resCareers"></div>
+<div class="tip">
+<b>¿Que hacer con este resultado?</b><br>
+Este test es un punto de partida. Habla con tu docente orientadora e investiga las carreras sugeridas.
+</div>
+<button onclick="restartTest()">Volver a hacer el test</button>
+</div>
+</section>
+
+<section id="carreras" style="background:#fff">
+<span class="tag">Carreras 2026-2035</span>
+<h2>Que estudiar y donde</h2>
+
+<div class="tip">
+<b>Tip antes de elegir:</b> Pensa en 3 cosas: que te apasiona, cuanto tiempo podes dedicar y que salida laboral tiene.
+</div>
+
+<h3 style="margin:20px 0 10px">Centros cercanos a vos</h3>
+
+<div class="card">
+<h3>IES N°9-024 Lavalle (A tu alcance)</h3>
+<p>Dr. Moreno y Fleming, Lavalle</p>
+<p>Profesorados · Tecnicaturas · Formacion Docente</p>
+<a href="https://lavalle.mendoza.edu.ar/ies-9-024" target="_blank">Ver instituto →</a>
+</div>
+
+<div class="card">
+<h3>IES N°9-001 San Martin + ITU Sede Este (40 km)</h3>
+<p>Profesorados · Tecnicaturas Universitarias · Electromecanica · Administracion</p>
+<a href="https://itu.uncuyo.edu.ar" target="_blank">Ver ITU Sede Este →</a>
+</div>
+
+<div class="card">
+<h3>UNCuyo + UTN Mendoza (80 km)</h3>
+<p>Ingenierias · Medicina · Agronomia · Sistemas · Economia · Perforista Minero</p>
+<p><b>Bienestar UNCuyo: (0261) 413-5010</b></p>
+<p>Universidades nacionales gratuitas. Becas de transporte y residencias para alumnos del interior.</p>
+<a href="https://www.uncuyo.edu.ar" target="_blank">UNCuyo →</a> | 
+<a href="https://www.frm.utn.edu.ar" target="_blank">UTN Mendoza →</a>
+</div>
+
+<h3 style="margin:25px 0 10px">Carreras por institucion</h3>
+
+<div class="card">
+<h3>UNCuyo Ingenieria (Petroleo, Civil, Sistemas, Mecatronica)</h3>
+<p>→ <a href="https://ingenieria.uncuyo.edu.ar" target="_blank">ingenieria.uncuyo.edu.ar</a></p>
+<p>→ Inscripcion online por SIU Guarani. Curso de ingreso a distancia si vivis a mas de 100 km.</p>
+<p>→ postulantes.uncuyo@uncuyo.edu.ar</p>
+</div>
+
+<div class="card">
+<h3>UNCuyo Ciencias Economicas (Contador, Economia, Administracion)</h3>
+<p>→ <a href="https://fce.uncuyo.edu.ar" target="_blank">fce.uncuyo.edu.ar</a></p>
+</div>
+
+<div class="card">
+<h3>UNCuyo Agronomia (unica carrera agropecuaria en Mendoza)</h3>
+<p>→ <a href="https://fca.uncuyo.edu.ar" target="_blank">fca.uncuyo.edu.ar</a></p>
+</div>
+
+<div class="card">
+<h3>UTN Mendoza (Sistemas, Electronica, Civil)</h3>
+<p>→ <a href="https://www.frm.utn.edu.ar" target="_blank">frm.utn.edu.ar</a> → "Ingresantes"</p>
+</div>
+
+<div class="card">
+<h3>Cursos gratuitos de IA y programacion</h3>
+<p>→ Google: <a href="https://www.cloudskillsboost.google" target="_blank">cloudskillsboost.google</a></p>
+<p>→ Argentina: <a href="https://www.argentina.gob.ar/argentinaprograma" target="_blank">argentina.gob.ar/argentinaprograma</a></p>
+</div>
+
+<div class="card">
+<h3>Mineria (NUEVO 2026) - Perforista Minero</h3>
+<p>→ CCT gratuitos: Urquiza 164 o Salta 1149, Ciudad. Presentate personalmente.</p>
+<p>→ <a href="mailto:mineria@mendoza.gov.ar">mineria@mendoza.gov.ar</a></p>
+</div>
+
+<div class="card">
+<h3>Marketing Digital GRATIS</h3>
+<p>→ <a href="https://www.argentina.gob.ar" target="_blank">argentina.gob.ar</a> → busca "Marketing Digital"</p>
+</div>
+
+<p><b>DGE Mendoza: (0261) 449-4600</b></p>
+</section>
+
+<section id="empleo">
+<span class="tag">Primer Empleo</span>
+<h2>Trabajar mientras estudias</h2>
+
+<div class="tip">
+<b>La regla de oro:</b> No busques el mejor sueldo, busca el que mas te enseñe. La experiencia vale mas que el dinero en tu primer trabajo.
+</div>
+
+<h3 style="margin:20px 0 10px">Empleos para estudiantes</h3>
+
+<div class="card">
+<h3>Administrativo / Recepcionista Jr. <span class="salary">$500k-900k/mes</span></h3>
+<p>Trabajo de oficina en empresas, estudios contables o municipios.</p>
+<p><b>Requisito:</b> Secundario completo, manejo basico de PC</p>
+<p>✅ Lunes a viernes · Sin experiencia</p>
+</div>
+
+<div class="card">
+<h3>Asistente de Marketing Digital <span class="salary">$600k-1.2M/mes</span></h3>
+<p>Manejar Instagram, TikTok y diseño basico para pymes.</p>
+<p><b>Requisito:</b> Creatividad, celular, Canva basico</p>
+<p>✅ Remoto · Horario libre</p>
+</div>
+
+<div class="card">
+<h3>Apoyo escolar / Tutor <span class="salary">$400k-700k/mes</span></h3>
+<p>Dar clases particulares de materias que dominas.</p>
+<p><b>Requisito:</b> Conocimiento solido de la materia</p>
+<p>✅ Flexible · Alta demanda</p>
+</div>
+
+<div class="card">
+<h3>Atencion al publico / Ventas <span class="salary">$450k-650k/mes</span></h3>
+<p>Supermercados, locales de ropa, ferreterias.</p>
+<p><b>Requisito:</b> DNI, secundario completo</p>
+<p>✅ Turno flexible · Sin experiencia</p>
+</div>
+
+<h3 style="margin:25px 0 10px">Para aprender un oficio rapido</h3>
+
+<div class="card">
+<h3>Oficial de oficio (electricidad, plomeria) <span class="salary">$800k-1.5M/mes</span></h3>
+<p>Los oficios son los trabajos mejor pagados a corto plazo.</p>
+<p><b>Requisito:</b> Curso tecnico (1-2 años en INAT)</p>
+<p>✅ Alta demanda · Muy bien pagado</p>
+</div>
+
+<div class="card">
+<h3>Trabajo en bodegas / cosecha <span class="salary">$700k-1.1M/mes</span></h3>
+<p>Vendimia (enero-abril) en Lavalle, Lujan y San Martin.</p>
+<p><b>Requisito:</b> Disponibilidad, capacidad fisica</p>
+<p>✅ Feb-Abril · Ahorro rapido</p>
+</div>
+
+<h3 style="margin:25px 0 10px">Donde buscar trabajo</h3>
+
+<div class="tip">
+<b>Estrategia:</b> No mandes el mismo CV a 50 lugares. Elegi 5 empresas donde quieras trabajar y personaliza tu postulacion.
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:15px 0">
+<a href="https://www.computrabajo.com.ar" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>🖥️<br>Computrabajo</b></a>
+<a href="https://www.linkedin.com" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>💼<br>LinkedIn</b></a>
+<a href="https://www.zonajobs.com" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>🔍<br>ZonaJobs</b></a>
+<a href="https://ar.indeed.com" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>📱<br>Indeed</b></a>
+</div>
+
+<div class="card">
+<h3>🏢 Ir en persona</h3>
+<p><b>El metodo mas efectivo:</b> Ir de lunes a jueves por la mañana, con el CV impreso, vestido prolijo y con actitud positiva. El 60% de los empleos de primer trabajo se consiguen asi.</p>
+</div>
+
+<div class="warning">
+<b>Derechos laborales que tenes que conocer:</b>
+<ul style="margin-top:10px;padding-left:20px">
+<li>Podes trabajar desde los <b>16 años</b> con autorizacion de tus padres</li>
+<li>Tenes derecho a estar <b>registrado (en blanco)</b></li>
+<li>Si trabajas en negro: no tenes ART, no acumulas jubilacion</li>
+<li>Ministerio de Trabajo de Mendoza: <b>0800-999-2225</b></li>
+</ul>
+</div>
+</section>
+<section id="cv" style="background:#fff">
+<span class="tag">Tu CV Personal</span>
+<h2>Construi tu CV ahora</h2>
+<p>Completa cada campo y al final tendras tu CV listo para imprimir.</p>
+
+<div style="background:#f0f7fa;padding:12px;border-radius:10px;margin:15px 0">
+<b>Prof. Sandra Agüero</b> · Coordinadora de Lengua y Comunicacion · E.A. N°4-264
+</div>
+
+<div id="cvForm">
+<div id="cvStep1">
+<h3>1. Datos personales</h3>
+<label>Nombre completo</label>
+<input type="text" id="cvNombre" placeholder="Ej: Maria Gonzalez">
+
+<label>Ciudad y provincia</label>
+<input type="text" id="cvCiudad" placeholder="Ej: Arroyito, Lavalle, Mendoza">
+
+<label>Telefono / WhatsApp</label>
+<input type="text" id="cvTelefono" placeholder="Ej: 261-123-4567">
+
+<label>Email</label>
+<input type="email" id="cvEmail" placeholder="nombre.apellido@gmail.com">
+
+<div class="tip" style="margin-top:12px">
+<b>Consejo:</b> Crea un email profesional. Evita mails como "pekeña2007".
+</div>
+
+<button onclick="cvNext(2)">Siguiente →</button>
+</div>
+
+<div id="cvStep2" class="hidden">
+<h3>2. Perfil profesional</h3>
+<p>3 oraciones sobre quien sos y que buscas.</p>
+<textarea id="cvPerfil" rows="4" placeholder="Ej: Egresada del secundario con experiencia en atencion al publico. Me destaco por mi comunicacion clara y trabajo en equipo. Busco incorporarme a un equipo de ventas."></textarea>
+
+<div class="tip">
+<b>Ejemplo:</b> "Egresada del secundario con experiencia en atencion al publico. Me destaco por mi comunicacion clara. Busco un equipo donde pueda aprender y aportar."
+</div>
+
+<button onclick="cvPrev(1)">← Anterior</button>
+<button onclick="cvNext(3)">Siguiente →</button>
+</div>
+
+<div id="cvStep3" class="hidden">
+<h3>3. Formacion academica</h3>
+<label>Escuela y año de egreso</label>
+<input type="text" id="cvEscuela" placeholder="Ej: E.A. N°4-264 Sin Nombre - Egreso 2026">
+
+<label>Titulo obtenido</label>
+<input type="text" id="cvTitulo" placeholder="Ej: Bachiller con orientacion en...">
+
+<label>¿Estas estudiando algo mas? (opcional)</label>
+<input type="text" id="cvEstudiando" placeholder="Ej: Curso de computacion...">
+
+<label>Cursos o talleres (opcional)</label>
+<textarea id="cvCursos" rows="2" placeholder="Ej: Primeros auxilios, electricidad basica, ingles..."></textarea>
+
+<div class="tip">
+<b>Consejo:</b> Cualquier curso cuenta: computacion, cocina, electricidad, idiomas. ¡Ponelos todos!
+</div>
+
+<button onclick="cvPrev(2)">← Anterior</button>
+<button onclick="cvNext(4)">Siguiente →</button>
+</div>
+
+<div id="cvStep4" class="hidden">
+<h3>4. Experiencia laboral</h3>
+<p>¿No tenes trabajo formal? No importa. Todo cuenta: changas, campo, cuidado de personas.</p>
+
+<label>Experiencia 1</label>
+<input type="text" id="cvExp1Titulo" placeholder="Ej: Ayuda en cosecha de uva - Bodega Los Andes">
+<textarea id="cvExp1Desc" rows="2" placeholder="Describi que hiciste..."></textarea>
+
+<label>Experiencia 2 (opcional)</label>
+<input type="text" id="cvExp2Titulo" placeholder="Ej: Cuidado de hermanos menores">
+<textarea id="cvExp2Desc" rows="2" placeholder="Describi que hiciste..."></textarea>
+
+<div class="tip">
+<b>Ideas si no tenes experiencia formal:</b> Ayuda en el campo · Cuidado de hermanos · Venta de productos · Colaboracion en eventos · Rol en la escuela
+</div>
+
+<button onclick="cvPrev(3)">← Anterior</button>
+<button onclick="cvNext(5)">Siguiente →</button>
+</div>
+
+<div id="cvStep5" class="hidden">
+<h3>5. Habilidades</h3>
+<p>Mantené presionada la tecla Ctrl para seleccionar varias:</p>
+
+<label>Habilidades blandas</label>
+<select id="cvSoft" multiple size="6" style="height:auto">
+<option>Trabajo en equipo</option>
+<option>Comunicacion clara</option>
+<option>Responsabilidad y puntualidad</option>
+<option>Resolucion de problemas</option>
+<option>Adaptabilidad</option>
+<option>Proactividad</option>
+<option>Empatia y escucha activa</option>
+<option>Liderazgo</option>
+</select>
+
+<label>Habilidades tecnicas</label>
+<select id="cvTech" multiple size="6" style="height:auto">
+<option>Celular y WhatsApp</option>
+<option>Word y Excel basico</option>
+<option>Redes sociales</option>
+<option>Maquinaria agricola</option>
+<option>Licencia conducir B</option>
+<option>Ingles basico</option>
+<option>Canva y diseño basico</option>
+<option>Primeros auxilios</option>
+</select>
+
+<label>Otras habilidades</label>
+<textarea id="cvOtras" rows="2" placeholder="Ej: Cocina, electricidad basica..."></textarea>
+
+<button onclick="cvPrev(4)">← Anterior</button>
+<button onclick="cvNext(6)">Siguiente →</button>
+</div>
+
+<div id="cvStep6" class="hidden">
+<h3>6. Referencias personales</h3>
+<p>2 personas que puedan hablar bien de vos. Avisales antes.</p>
+
+<label>Referencia 1</label>
+<input type="text" id="cvRef1Nom" placeholder="Nombre completo" style="margin-bottom:5px">
+<input type="text" id="cvRef1Cargo" placeholder="Cargo / Relacion" style="margin-bottom:5px">
+<input type="text" id="cvRef1Tel" placeholder="Telefono">
+
+<label>Referencia 2 (opcional)</label>
+<input type="text" id="cvRef2Nom" placeholder="Nombre completo" style="margin-bottom:5px">
+<input type="text" id="cvRef2Cargo" placeholder="Cargo / Relacion" style="margin-bottom:5px">
+<input type="text" id="cvRef2Tel" placeholder="Telefono">
+
+<div class="tip">
+<b>Quien puede ser tu referencia:</b> Docente · Director/a · Encargado de finca · Vecino con negocio. No uses familiares directos.
+</div>
+
+<button onclick="cvPrev(5)">← Anterior</button>
+<button onclick="generarCV()" style="background:#28a745">✨ Ver mi CV</button>
+</div>
+</div>
+
+<div id="cvPreviewBox" class="hidden">
+<div class="cv-preview" id="cvPreviewContent"></div>
+<div style="text-align:center;margin-top:15px">
+<button onclick="descargarCV()" style="background:#e8b923;color:#1a1a2e">📄 Imprimir / Guardar como PDF</button>
+<button onclick="editarCV()">✏️ Editar</button>
+<button onclick="reiniciarCV()">🔄 Empezar de nuevo</button>
+</div>
+</div>
+</section>
+
+<section id="entrevista">
+<span class="tag">Guia para la entrevista</span>
+<h2>Como pasar tu primera entrevista</h2>
+
+<div class="tip">
+<b>Antes de ir:</b> Investiga la empresa. Llega 10 minutos antes. Lleva tu CV impreso (2 copias). Vestite prolijo/a. Apaga el celular.
+</div>
+
+<div class="card">
+<h3>❓ "Contame sobre vos"</h3>
+<p><b>Es la pregunta mas comun.</b> Preparate 4 oraciones: quien sos, donde estudiaste, que experiencia tenes y que buscas.</p>
+<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
+"Me llamo Valentina, soy egresada de la Escuela Albergue N°4-264 de Arroyito. Trabaje en cosecha y cuidado de personas. Me destaco por ser responsable y aprender rapido. Busco un trabajo donde pueda crecer."
+</div>
+<p style="color:#666;font-size:13px">💡 Practicalo en voz alta. No mas de 60 segundos.</p>
+</div>
+
+<div class="card">
+<h3>❓ "¿Por que queres trabajar aca?"</h3>
+<p><b>Investiga la empresa antes de ir. Nombrá algo especifico de ellos.</b></p>
+<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
+"Porque me interesa el rubro de la salud y vi que su empresa tiene buen ambiente de trabajo. Quiero aprender de profesionales con experiencia."
+</div>
+<p style="color:#c75b39;font-size:13px">🚫 Nunca digas solo "porque necesito trabajar".</p>
+</div>
+
+<div class="card">
+<h3>❓ "¿Cuales son tus puntos debiles?"</h3>
+<p><b>Nombrá una debilidad REAL que estes trabajando para mejorar.</b></p>
+<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
+"Tengo que mejorar mi manejo del tiempo cuando tengo muchas tareas. Por eso empece a usar una agenda."
+</div>
+<p style="color:#c75b39;font-size:13px">🚫 Nunca digas "soy perfeccionista".</p>
+</div>
+
+<div class="card">
+<h3>❓ "¿Donde te ves en 5 años?"</h3>
+<p><b>Mostrá ambicion realista.</b></p>
+<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
+"Me veo con una carrera universitaria en curso, habiendo crecido dentro de la empresa y con mas responsabilidades."
+</div>
+</div>
+
+<div class="card">
+<h3>❓ "¿Tenes alguna pregunta para nosotros?"</h3>
+<p><b>Siempre pregunta algo. Muestra interes real.</b></p>
+<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
+"¿Como es el proceso de induccion?" / "¿Cuales son las posibilidades de crecimiento?" / "¿Como es el equipo de trabajo?"
+</div>
+</div>
+
+<div class="warning">
+<b>🚫 Lo que NUNCA haces en una entrevista:</b>
+<ul style="margin-top:10px;padding-left:20px">
+<li>Llegar tarde (si vas a llegar tarde, avisa antes)</li>
+<li>Mirar el celular</li>
+<li>Hablar mal de trabajos o escuelas anteriores</li>
+<li>Mentir sobre tu experiencia</li>
+<li>No preguntar nada al final</li>
+<li>Ir sin saber nada de la empresa</li>
+</ul>
+</div>
+</section>
+
+<section id="mercado" style="background:#fff">
+<span class="tag">Mercado Laboral 2026</span>
+<h2>Donde esta el trabajo HOY</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0">
+<div class="card" style="text-align:center">
+<div style="font-size:42px;font-weight:900;color:#1a5f7a">72%</div>
+<p>de las empresas en Mendoza buscan jovenes con secundario completo</p>
+</div>
+<div class="card" style="text-align:center">
+<div style="font-size:42px;font-weight:900;color:#1a5f7a">4x</div>
+<p>mas gana un tecnico calificado que uno sin titulo en 5 años</p>
+</div>
+</div>
+
+<h3 style="margin:20px 0 10px">Sectores con mayor demanda 2026-2035</h3>
+
+<div class="card">
+<h3>🤖 Inteligencia Artificial y Datos <span class="salary">98% demanda</span></h3>
+<p>Programadores, analistas de datos y especialistas en IA son los perfiles mas buscados. Argentina exporta talento tecnologico.</p>
+</div>
+
+<div class="card">
+<h3>🛢️ Petroleo, Gas y Mineria <span class="salary">90% demanda</span></h3>
+<p>Mendoza tiene yacimientos activos. Las empresas pagan de los mejores sueldos.</p>
+</div>
+
+<div class="card">
+<h3>🏥 Salud y Bienestar <span class="salary">92% demanda</span></h3>
+<p>Enfermeria, kinesiologia, nutricion. Carreras cortas como Auxiliar de Enfermeria (18 meses) ya dan trabajo inmediato.</p>
+</div>
+
+<div class="card">
+<h3>🌾 Agropecuario y Agronegocios <span class="salary">85% demanda</span></h3>
+<p>Drones, sensores, riego inteligente. Un agronomo con tecnologia puede trabajar desde cualquier lugar del mundo.</p>
+</div>
+
+<div class="card">
+<h3>💰 Finanzas y Contabilidad <span class="salary">83% demanda</span></h3>
+<p>La digitalizacion financiera (fintech, criptomonedas) abrio nuevos perfiles hibridos.</p>
+</div>
+
+<div class="card">
+<h3>🔧 Oficios Calificados <span class="salary">88% demanda</span></h3>
+<p>Electricistas, plomeros, soldadores. Un electricista habilitado puede ganar mas que muchos profesionales universitarios.</p>
+</div>
+
+<div class="card">
+<h3>🌞 Energias Renovables <span class="salary">78% demanda</span></h3>
+<p>Mendoza lidera la inversion en solar y eolica. Tecnicos escasos y muy bien pagados.</p>
+</div>
+
+<div class="tip">
+<b>Sectores que van a cambiar mucho:</b> La IA va a reemplazar trabajos repetitivos (cajeros, call center) pero va a crear nuevos: supervisores de IA, especialistas en prompts. La clave es formarse en habilidades que las maquinas no pueden reemplazar.
+</div>
+
+<h3 style="margin:25px 0 10px">Las 8 habilidades mas valoradas</h3>
+<ol style="padding-left:25px;line-height:2">
+<li><b>Comunicacion clara</b></li>
+<li><b>Trabajo en equipo</b></li>
+<li><b>Adaptabilidad</b></li>
+<li><b>Proactividad</b></li>
+<li><b>Manejo de herramientas digitales</b></li>
+<li><b>Responsabilidad y puntualidad</b></li>
+<li><b>Resolucion de problemas</b></li>
+<li><b>Capacidad de aprendizaje continuo</b></li>
+</ol>
+</section>
+
+<section id="motivacion">
+<span class="tag">Motivacion</span>
+<h2>Lo que nadie te dice antes de empezar</h2>
+
+<div class="quote">"No te compares con los demas. Comparate con quien eras ayer."<br><span style="font-size:14px;color:#666;font-style:normal">— Jordan B. Peterson</span></div>
+
+<div class="quote">"La educacion es el arma mas poderosa que podes usar para cambiar el mundo."<br><span style="font-size:14px;color:#666;font-style:normal">— Nelson Mandela</span></div>
+
+<div class="quote">"Veni de un lugar sin recursos no te limita. Te da una resistencia que la mayoria nunca va a tener."<br><span style="font-size:14px;color:#666;font-style:normal">— Anonimo rural</span></div>
+
+<h3 style="margin:20px 0 10px">Verdades que necesitas saber</h3>
+
+<div class="card">
+<h3>🚀 No hay un unico camino correcto</h3>
+<p>La universidad no es para todos. Hay personas que trabajaron 2 años, ahorraron, y entraron a la facultad con mas claridad.</p>
+</div>
+
+<div class="card">
+<h3>💡 El primer trabajo no es el trabajo de tu vida</h3>
+<p>El 80% de los profesionales cambia de rubro al menos una vez. Lo que aprendes en cada trabajo te sirve aunque cambies de area.</p>
+</div>
+
+<div class="card">
+<h3>📍 Venir de zonas rurales tiene ventajas reales</h3>
+<p>Tenes capacidad de adaptacion y conocimiento del trabajo fisico que la mayoria no tiene.</p>
+</div>
+
+<h3 style="margin:25px 0 10px">Historias reales</h3>
+
+<div class="story">
+<h4>👩 Valentina R., 24 años — Egresada rural → Enfermera</h4>
+<p style="font-style:italic">"Vengo de una zona sin luz electrica. Estudiaba con vela. Me decian que la universidad no era para chicos del campo. Hoy soy enfermera con trabajo fijo. Lo unico que necesitas es no escuchar a quienes no creen en vos."</p>
+</div>
+
+<div class="story">
+<h4>👨 Rodrigo M., 26 años — Arroyito → Tecnico Electricista · Emprendedor</h4>
+<p style="font-style:italic">"Termine la escuela sin saber que queria. Empece un curso de electricidad en el INAT porque era gratuito. A los 8 meses tenia trabajo. Hoy tengo mi propio negocio y 3 empleados."</p>
+</div>
+
+<div class="story">
+<h4>👩 Camila F., 22 años — CENS → 3° año Administracion UNCuyo</h4>
+<p style="font-style:italic">"Termine el secundario de noche trabajando de dia. Me daba verguenza anotarme en la UNCuyo. Me anote igual. Hoy estoy en tercer año y trabajo en RRHH. La verguenza era el unico obstaculo real."</p>
+</div>
+
+<div class="tip" style="text-align:center">
+<h3>🧭 3 cosas que podes hacer esta semana</h3>
+<ol style="text-align:left;max-width:450px;margin:15px auto;padding-left:20px">
+<li><b>Hace el test vocacional</b> de esta pagina y guarda el resultado.</li>
+<li><b>Habla con una persona</b> que ya este haciendo lo que vos queres hacer.</li>
+<li><b>Anota en papel</b> (no en el celular) una meta concreta para los proximos 12 meses.</li>
+</ol>
+</div>
+</section>
+
+<footer>
+<div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1a5f7a,#2a8faf);display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:24px">👩‍🏫</div>
+<h3>Prof. Sandra Agüero</h3>
+<p>Coordinadora de Lengua y Comunicacion<br>E.A. N°4-264 "Sin Nombre" · Arroyito, Lavalle · 2026</p>
+<p style="opacity:0.6;font-size:13px;margin-top:15px">Material elaborado con ❤️ para los egresados 2026</p>
+</footer>
+
+<script>
+const preguntas=[
+{q:"¿Que preferis hacer en tu tiempo libre?",o:[{t:"Armar o reparar cosas",v:"R"},{t:"Investigar y analizar",v:"I"},{t:"Dibujar, escribir o crear",v:"A"},{t:"Ayudar a alguien",v:"S"},{t:"Organizar o liderar",v:"E"},{t:"Ordenar y clasificar",v:"C"}]},
+{q:"En un trabajo ideal, ¿que es lo mas importante?",o:[{t:"Trabajar al aire libre",v:"R"},{t:"Resolver problemas complejos",v:"I"},{t:"Expresar creatividad",v:"A"},{t:"Ayudar a otros",v:"S"},{t:"Tomar decisiones",v:"E"},{t:"Seguir procedimientos",v:"C"}]},
+{q:"¿Que materia te gustaba mas?",o:[{t:"Educacion fisica o taller",v:"R"},{t:"Matematica o fisica",v:"I"},{t:"Plastica o musica",v:"A"},{t:"Ciencias sociales",v:"S"},{t:"Historia",v:"E"},{t:"Contabilidad",v:"C"}]},
+{q:"¿Como te describirian tus amigos?",o:[{t:"Practico y resolutivo",v:"R"},{t:"Curioso y analitico",v:"I"},{t:"Creativo y original",v:"A"},{t:"Cariñoso y comprensivo",v:"S"},{t:"Seguro y decidido",v:"E"},{t:"Organizado y responsable",v:"C"}]},
+{q:"¿Que ambiente de trabajo preferis?",o:[{t:"Taller o campo",v:"R"},{t:"Laboratorio",v:"I"},{t:"Estudio de arte",v:"A"},{t:"Hospital o escuela",v:"S"},{t:"Oficina de direccion",v:"E"},{t:"Oficina administrativa",v:"C"}]},
+{q:"¿Que te resulta mas satisfactorio?",o:[{t:"Ver algo funcionando",v:"R"},{t:"Descubrir algo nuevo",v:"I"},{t:"Crear algo unico",v:"A"},{t:"Ver a alguien mejorar",v:"S"},{t:"Lograr una meta",v:"E"},{t:"Completar una tarea bien",v:"C"}]},
+{q:"¿Como preferis aprender?",o:[{t:"Con las manos",v:"R"},{t:"Leyendo",v:"I"},{t:"Practicando libremente",v:"A"},{t:"Con alguien que me guie",v:"S"},{t:"Asumiendo desafios",v:"E"},{t:"Con manual paso a paso",v:"C"}]},
+{q:"¿Que te molesta mas?",o:[{t:"Estar sentado todo el dia",v:"R"},{t:"Tareas repetitivas",v:"I"},{t:"Reglas sin creatividad",v:"A"},{t:"Trabajar solo",v:"S"},{t:"No decidir",v:"E"},{t:"Desorden",v:"C"}]},
+{q:"¿Que habilidad desarrollarias?",o:[{t:"Manejar maquinaria",v:"R"},{t:"Programar",v:"I"},{t:"Diseñar o actuar",v:"A"},{t:"Escuchar y aconsejar",v:"S"},{t:"Negociar",v:"E"},{t:"Organizar datos",v:"C"}]},
+{q:"¿Que haces en grupo?",o:[{t:"Construir algo",v:"R"},{t:"Discutir ideas",v:"I"},{t:"Crear una obra",v:"A"},{t:"Ayudar al que necesita",v:"S"},{t:"Dirigir",v:"E"},{t:"Organizar tareas",v:"C"}]},
+{q:"¿Que pelicula preferis?",o:[{t:"Accion o aventura",v:"R"},{t:"Documental o sci-fi",v:"I"},{t:"Drama o arte",v:"A"},{t:"Superacion humana",v:"S"},{t:"Negocios o politica",v:"E"},{t:"Policial",v:"C"}]},
+{q:"Si ganaras la loteria...",o:[{t:"Comprar un taller",v:"R"},{t:"Financiar ciencia",v:"I"},{t:"Dedicarme al arte",v:"A"},{t:"Ayudar a mi comunidad",v:"S"},{t:"Invertir en negocio",v:"E"},{t:"Organizar finanzas",v:"C"}]},
+{q:"Ante los desafios...",o:[{t:"Accion directa",v:"R"},{t:"Analisis profundo",v:"I"},{t:"Creatividad",v:"A"},{t:"Trabajo en equipo",v:"S"},{t:"Oportunidad",v:"E"},{t:"Pasos ordenados",v:"C"}]},
+{q:"¿Que valoras en una persona?",o:[{t:"Capacidad de hacer",v:"R"},{t:"Inteligencia",v:"I"},{t:"Originalidad",v:"A"},{t:"Bondad",v:"S"},{t:"Ambicion",v:"E"},{t:"Puntualidad",v:"C"}]},
+{q:"¿Que preferis leer?",o:[{t:"Manuales tecnicos",v:"R"},{t:"Ciencia",v:"I"},{t:"Novelas",v:"A"},{t:"Biografias",v:"S"},{t:"Negocios",v:"E"},{t:"Actualidad",v:"C"}]},
+{q:"¿Como preferis que te evaluen?",o:[{t:"Resultados concretos",v:"R"},{t:"Razonamiento",v:"I"},{t:"Originalidad",v:"A"},{t:"Ayuda a otros",v:"S"},{t:"Objetivos",v:"E"},{t:"Cumplimiento",v:"C"}]},
+{q:"¿Que hay en tu escritorio ideal?",o:[{t:"Herramientas",v:"R"},{t:"Libros y PC",v:"I"},{t:"Materiales de arte",v:"A"},{t:"Fotos de familia",v:"S"},{t:"Trofeos",v:"E"},{t:"Agenda y calculadora",v:"C"}]},
+{q:"¿Algo se rompe en tu casa?",o:[{t:"Lo arreglo yo",v:"R"},{t:"Investigo primero",v:"I"},{t:"Rediseño",v:"A"},{t:"Pido ayuda",v:"S"},{t:"Contrato experto",v:"E"},{t:"Busco el manual",v:"C"}]},
+{q:"En 10 años te ves...",o:[{t:"Con mi taller",v:"R"},{t:"Experto en algo",v:"I"},{t:"Viviendo del arte",v:"A"},{t:"Ayudando a muchos",v:"S"},{t:"Con mi empresa",v:"E"},{t:"Carrera estable",v:"C"}]},
+{q:"¿Que regalas?",o:[{t:"Algo hecho a mano",v:"R"},{t:"Un libro",v:"I"},{t:"Algo artistico",v:"A"},{t:"Una experiencia",v:"S"},{t:"Algo util",v:"E"},{t:"Una tarjeta",v:"C"}]}
+];
+
+const perfiles={R:{n:"Realista",d:"Te gusta trabajar con herramientas, maquinaria o al aire libre. Sos practico, resolutivo y preferis ver resultados concretos.",c:["Ingenieria civil/mecanica/petrolera","Tecnico electromecanico","Agronomia","Oficios calificados","Perforista minero","Energias renovables"]},I:{n:"Investigativo",d:"Te gusta analizar, investigar y resolver problemas complejos. Sos curioso, logico y disfrutas aprender.",c:["Ingenieria en sistemas","Analisis de datos / IA","Medicina","Biotecnologia","Fisica/Quimica","Investigacion cientifica"]},A:{n:"Artistico",d:"Sos creativo, original y valoras la expresion personal. Te gusta innovar, diseñar y crear.",c:["Diseño grafico/UX","Marketing digital","Arquitectura","Comunicacion audiovisual","Musica/Artes escenicas","Publicidad"]},S:{n:"Social",d:"Te gusta ayudar, enseñar y cuidar de otros. Sos empatico, paciente y disfrutas del contacto humano.",c:["Profesorado/Educacion","Enfermeria/Medicina","Psicologia","Trabajo social","Kinesiologia/Nutricion","Recursos humanos"]},E:{n:"Emprendedor",d:"Sos lider natural, ambicioso y te gusta tomar decisiones. Te motivan los desafios y lograr metas.",c:["Administracion de empresas","Economia/Contador","Direccion de empresas","Marketing y ventas","Gestion publica","Emprendimiento"]},C:{n:"Convencional",d:"Sos organizado, detallista y te gusta seguir procedimientos claros. Valoras la precision y el orden.",c:["Contador publico","Administracion","Analisis de sistemas","Logistica","Banca y finanzas","Gestion documental"]}};
+
+let qAct=0,resp=[],sel=null;
+
+function mostrarQ(){
+const p=preguntas[qAct];
+let h="";
+p.o.forEach((o,i)=>{
+h+=`<button class="option-btn${sel===i?' selected':''}" onclick="elegir(${i})"><b style="display:inline-block;width:26px;height:26px;background:#1a5f7a;color:#fff;border-radius:50%;text-align:center;line-height:26px;margin-right:8px;font-size:13px">${String.fromCharCode(65+i)}</b>${o.t}</button>`;
+});
+document.getElementById('qtext').innerHTML=p.q;
+document.getElementById('qopts').innerHTML=h;
+document.getElementById('qnum').innerHTML=`<b>Pregunta ${qAct+1} de ${preguntas.length}</b>`;
+document.getElementById('prog').style.width=((qAct+1)/preguntas.length*100)+"%";
+document.getElementById('btnPrev').disabled=qAct===0;
+document.getElementById('btnNext').disabled=sel===null;
+document.getElementById('btnNext').innerHTML=qAct===preguntas.length-1?'Ver resultados':'Siguiente';
+}
+
+function elegir(i){sel=i;mostrarQ();}
+
+function nextQ(){
+if(sel===null)return;
+resp.push({q:qAct,t:preguntas[qAct].o[sel].v});
+sel=null;
+if(qAct<preguntas.length-1){qAct++;mostrarQ();}else{mostrarRes();}
+}
+
+function prevQ(){
+if(qAct>0){qAct--;resp.pop();sel=null;mostrarQ();}
+}
+
+function mostrarRes(){
+document.getElementById('testBox').classList.add('hidden');
+document.getElementById('resBox').classList.remove('hidden');
+const s={R:0,I:0,A:0,S:0,E:0,C:0};
+resp.forEach(r=>s[r.t]++);
+let max=0,d='R';
+for(let k in s){if(s[k]>max){max=s[k];d=k;}}
+const p=perfiles[d];
+document.getElementById('resName').innerHTML=p.n;
+document.getElementById('resDesc').innerHTML=p.d;
+let sh="";
+const n={R:'Realista',I:'Investigativo',A:'Artistico',S:'Social',E:'Emprendedor',C:'Convencional'};
+for(let k in s)sh+=`<span style="display:inline-block;background:#f0f7fa;padding:8px 15px;border-radius:8px;margin:4px"><b style="font-size:20px;color:#1a5f7a">${s[k]}</b><br><small>${n[k]}</small></span>`;
+document.getElementById('resScores').innerHTML=sh;
+document.getElementById('resCareers').innerHTML=p.c.map(c=>`<span style="display:inline-block;background:rgba(26,95,122,0.1);color:#1a5f7a;padding:6px 12px;border-radius:15px;margin:4px;font-size:14px">${c}</span>`).join('');
+}
+
+function restartTest(){qAct=0;resp=[];sel=null;document.getElementById('testBox').classList.remove('hidden');document.getElementById('resBox').classList.add('hidden');mostrarQ();}
+
+mostrarQ();
+
+function cvNext(n){for(let i=1;i<=6;i++)document.getElementById('cvStep'+i).classList.add('hidden');document.getElementById('cvStep'+n).classList.remove('hidden');}
+function cvPrev(n){cvNext(n);}
+
+function generarCV(){
+const nom=document.getElementById('cvNombre').value||'Tu Nombre';
+const ciu=document.getElementById('cvCiudad').value;
+const tel=document.getElementById('cvTelefono').value;
+const ema=document.getElementById('cvEmail').value;
+const perf=document.getElementById('cvPerfil').value;
+const esc=document.getElementById('cvEscuela').value;
+const tit=document.getElementById('cvTitulo').value;
+const est=document.getElementById('cvEstudiando').value;
+const cur=document.getElementById('cvCursos').value;
+const e1t=document.getElementById('cvExp1Titulo').value;
+const e1d=document.getElementById('cvExp1Desc').value;
+const e2t=document.getElementById('cvExp2Titulo').value;
+const e2d=document.getElementById('cvExp2Desc').value;
+const otr=document.getElementById('cvOtras').value;
+const r1n=document.getElementById('cvRef1Nom').value;
+const r1c=document.getElementById('cvRef1Cargo').value;
+const r1t=document.getElementById('cvRef1Tel').value;
+const r2n=document.getElementById('cvRef2Nom').value;
+const r2c=document.getElementById('cvRef2Cargo').value;
+const r2t=document.getElementById('cvRef2Tel').value;
+
+const soft=Array.from(document.getElementById('cvSoft').selectedOptions).map(o=>o.value);
+const tech=Array.from(document.getElementById('cvTech').selectedOptions).map(o=>o.value);
+
+let h=`<div style="text-align:center;border-bottom:3px solid #1a5f7a;padding-bottom:15px;margin-bottom:20px"><h2 style="color:#1a5f7a;margin:0">${nom}</h2><p style="color:#666;margin:8px 0;font-size:14px">${[ciu,tel,ema].filter(x=>x).join(' | ')}</p></div>`;
+
+if(perf)h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Perfil Profesional</h4><p style="font-size:14px">${perf}</p></div>`;
+
+if(esc||tit||est||cur){
+h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Formacion Academica</h4><ul style="padding-left:18px;font-size:14px">`;
+if(esc)h+=`<li><b>${esc}</b>${tit?' - '+tit:''}</li>`;
+if(est)h+=`<li>${est}</li>`;
+if(cur)h+=`<li>Cursos: ${cur}</li>`;
+h+=`</ul></div>`;
+}
+
+if(e1t||e2t){
+h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Experiencia</h4>`;
+if(e1t){h+=`<p style="font-size:14px"><b>${e1t}</b></p>`;if(e1d)h+=`<p style="font-size:14px">${e1d}</p>`;}
+if(e2t){h+=`<p style="font-size:14px;margin-top:8px"><b>${e2t}</b></p>`;if(e2d)h+=`<p style="font-size:14px">${e2d}</p>`;}
+h+=`</div>`;
+}
+
+const all=[...soft,...tech];
+if(all.length>0||otr){
+h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Habilidades</h4><ul style="padding-left:18px;font-size:14px">`;
+all.forEach(s=>h+=`<li>${s}</li>`);
+if(otr)h+=`<li>${otr}</li>`;
+h+=`</ul></div>`;
+}
+
+if(r1n||r2n){
+h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Referencias</h4>`;
+if(r1n)h+=`<p style="font-size:14px"><b>${r1n}</b>${r1c?' - '+r1c:''}${r1t?' | '+r1t:''}</p>`;
+if(r2n)h+=`<p style="font-size:14px"><b>${r2n}</b>${r2c?' - '+r2c:''}${r2t?' | '+r2t:''}</p>`;
+h+=`</div>`;
+}
+
+document.getElementById('cvPreviewContent').innerHTML=h;
+document.getElementById('cvForm').classList.add('hidden');
+document.getElementById('cvPreviewBox').classList.remove('hidden');
+}
+
+function descargarCV(){
+const e=document.getElementById('cvPreviewContent');
+const w=window.open('','_blank');
+w.document.write('<html><head><title>Mi CV</title><style>body{font-family:Arial;padding:30px;max-width:650px;margin:0 auto;line-height:1.6}</style></head><body>');
+w.document.write(e.innerHTML);
+w.document.write('</body></html>');
+w.document.close();
+w.print();
+}
+
+function editarCV(){
+document.getElementById('cvForm').classList.remove('hidden');
+document.getElementById('cvPreviewBox').classList.add('hidden');
+}
+
+function reiniciarCV(){
+for(let i=1;i<=6;i++)document.getElementById('cvStep'+i).classList.add('hidden');
+document.getElementById('cvStep1').classList.remove('hidden');
+document.getElementById('cvForm').classList.remove('hidden');
+document.getElementById('cvPreviewBox').classList.add('hidden');
+document.querySelectorAll('#cvForm input, #cvForm textarea').forEach(x=>x.value='');
+document.querySelectorAll('#cvForm select').forEach(x=>Array.from(x.options).forEach(o=>o.selected=false));
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click',function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+});
+});
+</script>
+</body>
+</html>
