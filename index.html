@@ -1,775 +1,914 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head><base href="https://d16ilfvy4mv02r.cloudfront.net/workspaces/UlfBJjF0HsK5dFivP7GCd0RJel5MHNXj/5c40e382-657b-4ccc-b807-ee80eeadae7c/files/">
 <meta charset="UTF-8">
-<title>Orientacion Vocacional 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lengua y Literatura — Escuela 4-264</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f5f5f5;color:#333;max-width:900px;margin:0 auto;line-height:1.6}
-nav{position:sticky;top:0;background:#1a5f7a;padding:12px;text-align:center;z-index:100}
-nav a{color:#fff;text-decoration:none;margin:0 10px;font-size:14px;font-weight:600}
-section{padding:30px 20px}
-h1{color:#1a5f7a;text-align:center}
-h2{color:#1a5f7a;border-bottom:2px solid #e8b923;padding-bottom:8px;margin:30px 0 15px}
-.card{background:#fff;padding:20px;border-radius:12px;margin:15px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-.tag{display:inline-block;background:#1a5f7a;color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:10px}
-.salary{background:#28a745;color:#fff;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:700}
-a{color:#1a5f7a;font-weight:700}
-button{background:#1a5f7a;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:15px;margin:5px}
-button:hover{background:#2a8faf}
-input,textarea,select{width:100%;padding:10px;margin:8px 0;border:2px solid #ddd;border-radius:8px;font-size:15px}
-label{font-weight:700;display:block;margin-top:15px;color:#1a5f7a}
-.progress{background:#e0e0e0;border-radius:10px;height:18px;margin:15px 0}
-.progress-fill{background:#1a5f7a;height:100%;border-radius:10px;transition:width 0.3s}
-.option-btn{width:100%;padding:12px;margin:6px 0;border:2px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;text-align:left;font-size:15px;color:#333
-}
-.option-btn:hover{border-color:#1a5f7a;background:#f0f7fa}
-.option-btn.selected{border-color:#1a5f7a;background:#e8f4f8}
-.hidden{display:none}
-.cv-preview{background:#fff;border:2px solid #ddd;padding:25px;margin-top:15px;border-radius:10px}
-.tip{background:#e8f5e9;border:2px solid #a5d6a7;padding:15px;border-radius:10px;margin:15px 0}
-.warning{background:#fff3f0;border:2px solid #ffccbc;padding:15px;border-radius:10px;margin:15px 0}
-.hero{background:linear-gradient(135deg,#1a1a2e,#1a5f7a);color:#fff;text-align:center;padding:60px 20px}
-.hero h1{font-size:36px;margin-bottom:10px}
-.hero h1 span{color:#e8b923}
-.quote{font-size:18px;font-weight:700;color:#1a5f7a;text-align:center;padding:25px;font-style:italic;background:#fff;border-radius:12px;margin:15px 0}
-.story{background:#fff;padding:18px;border-radius:12px;margin:15px 0;border-left:4px solid #e8b923}
-footer{background:#1a1a2e;color:#fff;text-align:center;padding:40px 20px}
+:root{--azul:#1d4ed8;--azul-claro:#dbeafe;--verde:#16a34a;--verde-claro:#dcfce7;--naranja:#ea580c;--naranja-claro:#ffedd5;--gris:#f8fafc;--borde:#e2e8f0;--texto:#1e293b;--muted:#64748b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:var(--gris);color:var(--texto);min-height:100vh}
+header{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:#fff;padding:16px 24px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+header h1{font-size:1.2rem;font-weight:700;line-height:1.3}
+header p{font-size:.8rem;opacity:.85}
+.logo{font-size:2.2rem}
+nav{background:#fff;border-bottom:2px solid var(--borde);display:flex;gap:0;overflow-x:auto;padding:0 16px}
+nav button{padding:12px 20px;border:none;background:none;cursor:pointer;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;transition:.2s;white-space:nowrap;font-size:.88rem}
+nav button.active,nav button:hover{color:var(--azul);border-bottom-color:var(--azul)}
+nav button.docente-btn{margin-left:auto;color:var(--naranja)}
+nav button.docente-btn.active,nav button.docente-btn:hover{color:var(--naranja);border-bottom-color:var(--naranja)}
+.container{max-width:900px;margin:0 auto;padding:24px 16px}
+.screen{display:none}
+.screen.active{display:block}
+
+/* Login alumno */
+.login-card{background:#fff;border-radius:16px;padding:40px;max-width:420px;margin:40px auto;box-shadow:0 4px 20px rgba(0,0,0,.08);text-align:center}
+.login-card h2{font-size:1.4rem;margin-bottom:8px;color:var(--azul)}
+.login-card p{color:var(--muted);margin-bottom:24px;font-size:.93rem}
+.login-card input,.login-card select{width:100%;padding:12px 14px;border:2px solid var(--borde);border-radius:10px;font-size:1rem;margin-bottom:14px;outline:none;transition:.2s}
+.login-card input:focus,.login-card select:focus{border-color:var(--azul)}
+.btn{padding:12px 28px;border:none;border-radius:10px;cursor:pointer;font-size:1rem;font-weight:600;transition:.2s}
+.btn-primary{background:var(--azul);color:#fff}
+.btn-primary:hover{background:#1e40af}
+.btn-secondary{background:var(--borde);color:var(--texto)}
+.btn-success{background:var(--verde);color:#fff}
+.btn-success:hover{background:#15803d}
+.btn-orange{background:var(--naranja);color:#fff}
+.btn-orange:hover{background:#c2410c}
+.btn-sm{padding:6px 14px;font-size:.82rem;border-radius:7px}
+
+/* Actividades */
+.year-title{background:linear-gradient(90deg,var(--azul),#3b82f6);color:#fff;padding:16px 20px;border-radius:12px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between}
+.year-title h2{font-size:1.15rem;font-weight:700}
+.alumno-badge{background:rgba(255,255,255,.2);padding:4px 12px;border-radius:20px;font-size:.85rem}
+.progress-bar-wrap{background:rgba(255,255,255,.2);border-radius:20px;height:8px;margin-top:8px;width:100%}
+.progress-bar-fill{background:#fff;border-radius:20px;height:8px;transition:.4s}
+.actividad-card{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid var(--azul)}
+.actividad-card.completada{border-left-color:var(--verde);opacity:.9}
+.actividad-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.actividad-title{font-weight:700;font-size:1rem;color:var(--texto)}
+.badge{padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600}
+.badge-verde{background:var(--verde-claro);color:var(--verde)}
+.badge-azul{background:var(--azul-claro);color:var(--azul)}
+.badge-naranja{background:var(--naranja-claro);color:var(--naranja)}
+.pregunta{margin-bottom:14px}
+.pregunta p{font-size:.93rem;margin-bottom:8px;color:var(--texto);line-height:1.5}
+.opciones{display:flex;flex-direction:column;gap:7px}
+.opcion{padding:10px 14px;border:2px solid var(--borde);border-radius:8px;cursor:pointer;font-size:.9rem;transition:.2s;background:#fff;text-align:left}
+.opcion:hover{border-color:var(--azul);background:var(--azul-claro)}
+.opcion.correcta{border-color:var(--verde);background:var(--verde-claro);color:var(--verde)}
+.opcion.incorrecta{border-color:#dc2626;background:#fee2e2;color:#dc2626}
+.opcion:disabled{cursor:default}
+.feedback{margin-top:10px;padding:10px 14px;border-radius:8px;font-size:.88rem;font-weight:600}
+.feedback.ok{background:var(--verde-claro);color:var(--verde)}
+.feedback.mal{background:#fee2e2;color:#dc2626}
+.act-footer{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--borde)}
+.puntaje-texto{font-size:.88rem;color:var(--muted)}
+.completada-icon{font-size:1.3rem}
+
+/* Fichas descargables */
+.fichas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.ficha-card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:4px solid var(--azul)}
+.ficha-card h3{font-size:.97rem;font-weight:700;margin-bottom:6px}
+.ficha-card p{font-size:.85rem;color:var(--muted);margin-bottom:14px;line-height:1.4}
+.ficha-card .btn{width:100%;text-align:center;display:block}
+
+/* Panel Docente */
+.docente-login{background:#fff;border-radius:16px;padding:36px;max-width:380px;margin:40px auto;box-shadow:0 4px 20px rgba(0,0,0,.08);text-align:center}
+.docente-login h2{color:var(--naranja);margin-bottom:8px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-bottom:24px}
+.stat-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.06);text-align:center}
+.stat-num{font-size:2rem;font-weight:700;color:var(--azul)}
+.stat-label{font-size:.82rem;color:var(--muted);margin-top:4px}
+.tabla{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.tabla th{background:var(--azul);color:#fff;padding:12px 14px;text-align:left;font-size:.85rem;font-weight:600}
+.tabla td{padding:11px 14px;border-bottom:1px solid var(--borde);font-size:.88rem}
+.tabla tr:last-child td{border-bottom:none}
+.tabla tr:hover td{background:var(--azul-claro)}
+.nota-chip{padding:3px 10px;border-radius:20px;font-weight:700;font-size:.82rem;display:inline-block}
+.nota-a{background:#dcfce7;color:#15803d}
+.nota-b{background:#dbeafe;color:#1d4ed8}
+.nota-c{background:#fef9c3;color:#854d0e}
+.nota-d{background:#fee2e2;color:#b91c1c}
+.export-row{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.section-title{font-size:1.05rem;font-weight:700;margin-bottom:14px;color:var(--texto);display:flex;align-items:center;gap:8px}
+.filter-row{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.filter-row select{padding:8px 12px;border:2px solid var(--borde);border-radius:8px;font-size:.88rem;outline:none}
+.filter-row select:focus{border-color:var(--azul)}
+.empty-state{text-align:center;padding:40px;color:var(--muted)}
+.empty-state .icon{font-size:3rem;margin-bottom:12px}
+@media(max-width:600px){nav button{padding:10px 12px;font-size:.8rem}.year-title{flex-direction:column;align-items:flex-start;gap:8px}}
 </style>
 </head>
 <body>
 
-<nav>
-<a href="#test">Test</a>
-<a href="#carreras">Carreras</a>
-<a href="#empleo">Empleo</a>
-<a href="#cv">CV</a>
-<a href="#entrevista">Entrevista</a>
-<a href="#mercado">Mercado</a>
-<a href="#motivacion">Motivacion</a>
+<header>
+  <div class="logo">📚</div>
+  <div>
+    <h1>Lengua y Literatura</h1>
+    <p>Escuela 4-264 · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero</p>
+  </div>
+</header>
+
+<nav id="mainNav">
+  <button onclick="mostrarLogin()" class="active" id="navLogin">🏠 Inicio</button>
+  <button onclick="irAAnio(1)" id="nav1" style="display:none">1° Año</button>
+  <button onclick="irAAnio(2)" id="nav2" style="display:none">2° Año</button>
+  <button onclick="irAAnio(3)" id="nav3" style="display:none">3° Año</button>
+  <button onclick="irAAnio(4)" id="nav4" style="display:none">4° Año</button>
+  <button onclick="irAAnio(5)" id="nav5" style="display:none">5° Año</button>
+  <button onclick="irAFichas()" id="navFichas" style="display:none">📄 Fichas</button>
+  <button class="docente-btn" id="navDocente" onclick="mostrarDocente()">🔐 Docente</button>
 </nav>
 
-<div class="hero">
-<h1>El mundo te espera.<br><span>¿Estas listo?</span></h1>
-<p style="max-width:600px;margin:15px auto;opacity:0.9">Una guia honesta sobre carreras, trabajo, dinero y futuro. Para vos que terminas el secundario y empezas de cero.</p>
-<a href="#test" style="background:#e8b923;color:#1a1a2e;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin:5px">Hacer el Test</a>
-<a href="#carreras" style="background:transparent;color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;margin:5px;border:2px solid rgba(255,255,255,0.4)">Ver Carreras</a>
-<p style="margin-top:25px;opacity:0.8;font-size:14px"><strong>E.A. N°4-264 "Sin Nombre"</strong><br>Arroyito, Lavalle - Mendoza · 5° Año 2026</p>
+<!-- SCREEN: LOGIN -->
+<div class="screen active" id="screenLogin">
+  <div class="login-card">
+    <div style="font-size:3rem;margin-bottom:12px">🎒</div>
+    <h2>¡Bienvenido/a!</h2>
+    <p>Ingresá tu nombre y tu año para comenzar las actividades.</p>
+    <input type="text" id="inputNombre" placeholder="Tu nombre y apellido" maxlength="50">
+    <select id="inputAnio">
+      <option value="">— Seleccioná tu año —</option>
+      <option value="1">1° Año</option>
+      <option value="2">2° Año</option>
+      <option value="3">3° Año</option>
+      <option value="4">4° Año</option>
+      <option value="5">5° Año</option>
+    </select>
+    <button class="btn btn-primary" style="width:100%" onclick="iniciarSesion()">Entrar →</button>
+    <p id="loginError" style="color:#dc2626;font-size:.85rem;margin-top:10px;display:none">Por favor completá tu nombre y año.</p>
+  </div>
+</div>
+
+<!-- SCREEN: ACTIVIDADES (se llena dinámicamente) -->
+<div class="screen" id="screenActividades">
+  <div class="container" id="actividadesContainer"></div>
+</div>
+
+<!-- SCREEN: FICHAS -->
+<div class="screen" id="screenFichas">
+  <div class="container">
+    <div class="year-title" style="background:linear-gradient(90deg,#15803d,#22c55e)">
+      <div>
+        <h2>📄 Fichas de Trabajo Descargables</h2>
+        <div style="font-size:.85rem;opacity:.9;margin-top:4px">Para imprimir y trabajar en clase presencial</div>
+      </div>
+    </div>
+    <div class="fichas-grid" id="fichasGrid"></div>
+  </div>
+</div>
+
+<!-- SCREEN: DOCENTE LOGIN -->
+<div class="screen" id="screenDocenteLogin">
+  <div class="docente-login">
+    <div style="font-size:3rem;margin-bottom:12px">🔐</div>
+    <h2>Panel Docente</h2>
+    <p style="color:var(--muted);margin-bottom:20px;font-size:.9rem">Ingresá la contraseña para ver los registros de avance.</p>
+    <input type="password" id="passInput" placeholder="Contraseña docente" style="width:100%;padding:12px;border:2px solid var(--borde);border-radius:10px;font-size:1rem;margin-bottom:14px;outline:none">
+    <button class="btn btn-orange" style="width:100%" onclick="verificarPass()">Acceder</button>
+    <p id="passError" style="color:#dc2626;font-size:.85rem;margin-top:10px;display:none">Contraseña incorrecta.</p>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:16px">💡 Contraseña predeterminada: <b>sandra2024</b></p>
+  </div>
+</div>
+
+<!-- SCREEN: PANEL DOCENTE -->
+<div class="screen" id="screenDocente">
+  <div class="container">
+    <div class="year-title" style="background:linear-gradient(90deg,#c2410c,#f97316)">
+      <h2>📊 Panel Docente — Registro de Avances</h2>
+      <button class="btn btn-sm" style="background:rgba(255,255,255,.2);color:#fff;border:none" onclick="cerrarDocente()">Cerrar sesión</button>
+    </div>
+
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <div class="filter-row">
+      <select id="filtroAnio" onchange="renderTabla()">
+        <option value="">Todos los años</option>
+        <option value="1">1° Año</option>
+        <option value="2">2° Año</option>
+        <option value="3">3° Año</option>
+        <option value="4">4° Año</option>
+        <option value="5">5° Año</option>
+      </select>
+      <select id="filtroNota" onchange="renderTabla()">
+        <option value="">Todas las notas</option>
+        <option value="A">Sobresaliente (A)</option>
+        <option value="B">Bueno (B)</option>
+        <option value="C">Regular (C)</option>
+        <option value="D">En proceso (D)</option>
+      </select>
+    </div>
+
+    <div class="export-row">
+      <button class="btn btn-success btn-sm" onclick="exportarCSV()">⬇ Exportar CSV</button>
+      <button class="btn btn-primary btn-sm" onclick="exportarTexto()">📋 Copiar resumen</button>
+      <button class="btn btn-secondary btn-sm" onclick="limpiarDatos()" style="margin-left:auto">🗑 Limpiar datos</button>
+    </div>
+
+    <div class="section-title">👩‍🎓 Registro individual de alumnos</div>
+    <div id="tablaContainer"></div>
+  </div>
 </div>
-
-<section id="test">
-<span class="tag">Test Profesional</span>
-<h2>¿Quien sos y adonde vas?</h2>
-<p>20 preguntas para identificar tu perfil real. No hay respuestas correctas.</p>
-
-<div id="testBox">
-<div class="progress"><div class="progress-fill" id="prog" style="width:5%"></div></div>
-<p id="qnum"><b>Pregunta 1 de 20</b></p>
-<p id="qtext" style="font-size:18px;font-weight:600;margin:15px 0"></p>
-<div id="qopts"></div>
-<div style="margin-top:15px">
-<button onclick="prevQ()" id="btnPrev" disabled>Anterior</button>
-<button onclick="nextQ()" id="btnNext" disabled>Siguiente</button>
-</div>
-</div>
-
-<div id="resBox" class="hidden">
-<div class="card" style="background:linear-gradient(135deg,#1a5f7a,#2a8faf);color:#fff;text-align:center">
-<h3 style="color:#e8b923">Tu perfil: <span id="resName" style="font-size:28px;display:block;margin:10px 0"></span></h3>
-<p id="resDesc"></p>
-</div>
-<h3 style="color:#1a5f7a;margin:15px 0">Puntajes:</h3>
-<div id="resScores"></div>
-<h3 style="color:#1a5f7a;margin:15px 0">Carreras recomendadas:</h3>
-<div id="resCareers"></div>
-<div class="tip">
-<b>¿Que hacer con este resultado?</b><br>
-Este test es un punto de partida. Habla con tu docente orientadora e investiga las carreras sugeridas.
-</div>
-<button onclick="restartTest()">Volver a hacer el test</button>
-</div>
-</section>
-
-<section id="carreras" style="background:#fff">
-<span class="tag">Carreras 2026-2035</span>
-<h2>Que estudiar y donde</h2>
-
-<div class="tip">
-<b>Tip antes de elegir:</b> Pensa en 3 cosas: que te apasiona, cuanto tiempo podes dedicar y que salida laboral tiene.
-</div>
-
-<h3 style="margin:20px 0 10px">Centros cercanos a vos</h3>
-
-<div class="card">
-<h3>IES N°9-024 Lavalle (A tu alcance)</h3>
-<p>Dr. Moreno y Fleming, Lavalle</p>
-<p>Profesorados · Tecnicaturas · Formacion Docente</p>
-<a href="https://lavalle.mendoza.edu.ar/ies-9-024" target="_blank">Ver instituto →</a>
-</div>
-
-<div class="card">
-<h3>IES N°9-001 San Martin + ITU Sede Este (40 km)</h3>
-<p>Profesorados · Tecnicaturas Universitarias · Electromecanica · Administracion</p>
-<a href="https://itu.uncuyo.edu.ar" target="_blank">Ver ITU Sede Este →</a>
-</div>
-
-<div class="card">
-<h3>UNCuyo + UTN Mendoza (80 km)</h3>
-<p>Ingenierias · Medicina · Agronomia · Sistemas · Economia · Perforista Minero</p>
-<p><b>Bienestar UNCuyo: (0261) 413-5010</b></p>
-<p>Universidades nacionales gratuitas. Becas de transporte y residencias para alumnos del interior.</p>
-<a href="https://www.uncuyo.edu.ar" target="_blank">UNCuyo →</a> | 
-<a href="https://www.frm.utn.edu.ar" target="_blank">UTN Mendoza →</a>
-</div>
-
-<h3 style="margin:25px 0 10px">Carreras por institucion</h3>
-
-<div class="card">
-<h3>UNCuyo Ingenieria (Petroleo, Civil, Sistemas, Mecatronica)</h3>
-<p>→ <a href="https://ingenieria.uncuyo.edu.ar" target="_blank">ingenieria.uncuyo.edu.ar</a></p>
-<p>→ Inscripcion online por SIU Guarani. Curso de ingreso a distancia si vivis a mas de 100 km.</p>
-<p>→ postulantes.uncuyo@uncuyo.edu.ar</p>
-</div>
-
-<div class="card">
-<h3>UNCuyo Ciencias Economicas (Contador, Economia, Administracion)</h3>
-<p>→ <a href="https://fce.uncuyo.edu.ar" target="_blank">fce.uncuyo.edu.ar</a></p>
-</div>
-
-<div class="card">
-<h3>UNCuyo Agronomia (unica carrera agropecuaria en Mendoza)</h3>
-<p>→ <a href="https://fca.uncuyo.edu.ar" target="_blank">fca.uncuyo.edu.ar</a></p>
-</div>
-
-<div class="card">
-<h3>UTN Mendoza (Sistemas, Electronica, Civil)</h3>
-<p>→ <a href="https://www.frm.utn.edu.ar" target="_blank">frm.utn.edu.ar</a> → "Ingresantes"</p>
-</div>
-
-<div class="card">
-<h3>Cursos gratuitos de IA y programacion</h3>
-<p>→ Google: <a href="https://www.cloudskillsboost.google" target="_blank">cloudskillsboost.google</a></p>
-<p>→ Argentina: <a href="https://www.argentina.gob.ar/argentinaprograma" target="_blank">argentina.gob.ar/argentinaprograma</a></p>
-</div>
-
-<div class="card">
-<h3>Mineria (NUEVO 2026) - Perforista Minero</h3>
-<p>→ CCT gratuitos: Urquiza 164 o Salta 1149, Ciudad. Presentate personalmente.</p>
-<p>→ <a href="mailto:mineria@mendoza.gov.ar">mineria@mendoza.gov.ar</a></p>
-</div>
-
-<div class="card">
-<h3>Marketing Digital GRATIS</h3>
-<p>→ <a href="https://www.argentina.gob.ar" target="_blank">argentina.gob.ar</a> → busca "Marketing Digital"</p>
-</div>
-
-<p><b>DGE Mendoza: (0261) 449-4600</b></p>
-</section>
-
-<section id="empleo">
-<span class="tag">Primer Empleo</span>
-<h2>Trabajar mientras estudias</h2>
-
-<div class="tip">
-<b>La regla de oro:</b> No busques el mejor sueldo, busca el que mas te enseñe. La experiencia vale mas que el dinero en tu primer trabajo.
-</div>
-
-<h3 style="margin:20px 0 10px">Empleos para estudiantes</h3>
-
-<div class="card">
-<h3>Administrativo / Recepcionista Jr. <span class="salary">$500k-900k/mes</span></h3>
-<p>Trabajo de oficina en empresas, estudios contables o municipios.</p>
-<p><b>Requisito:</b> Secundario completo, manejo basico de PC</p>
-<p>✅ Lunes a viernes · Sin experiencia</p>
-</div>
-
-<div class="card">
-<h3>Asistente de Marketing Digital <span class="salary">$600k-1.2M/mes</span></h3>
-<p>Manejar Instagram, TikTok y diseño basico para pymes.</p>
-<p><b>Requisito:</b> Creatividad, celular, Canva basico</p>
-<p>✅ Remoto · Horario libre</p>
-</div>
-
-<div class="card">
-<h3>Apoyo escolar / Tutor <span class="salary">$400k-700k/mes</span></h3>
-<p>Dar clases particulares de materias que dominas.</p>
-<p><b>Requisito:</b> Conocimiento solido de la materia</p>
-<p>✅ Flexible · Alta demanda</p>
-</div>
-
-<div class="card">
-<h3>Atencion al publico / Ventas <span class="salary">$450k-650k/mes</span></h3>
-<p>Supermercados, locales de ropa, ferreterias.</p>
-<p><b>Requisito:</b> DNI, secundario completo</p>
-<p>✅ Turno flexible · Sin experiencia</p>
-</div>
-
-<h3 style="margin:25px 0 10px">Para aprender un oficio rapido</h3>
-
-<div class="card">
-<h3>Oficial de oficio (electricidad, plomeria) <span class="salary">$800k-1.5M/mes</span></h3>
-<p>Los oficios son los trabajos mejor pagados a corto plazo.</p>
-<p><b>Requisito:</b> Curso tecnico (1-2 años en INAT)</p>
-<p>✅ Alta demanda · Muy bien pagado</p>
-</div>
-
-<div class="card">
-<h3>Trabajo en bodegas / cosecha <span class="salary">$700k-1.1M/mes</span></h3>
-<p>Vendimia (enero-abril) en Lavalle, Lujan y San Martin.</p>
-<p><b>Requisito:</b> Disponibilidad, capacidad fisica</p>
-<p>✅ Feb-Abril · Ahorro rapido</p>
-</div>
-
-<h3 style="margin:25px 0 10px">Donde buscar trabajo</h3>
-
-<div class="tip">
-<b>Estrategia:</b> No mandes el mismo CV a 50 lugares. Elegi 5 empresas donde quieras trabajar y personaliza tu postulacion.
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:15px 0">
-<a href="https://www.computrabajo.com.ar" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>🖥️<br>Computrabajo</b></a>
-<a href="https://www.linkedin.com" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>💼<br>LinkedIn</b></a>
-<a href="https://www.zonajobs.com" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>🔍<br>ZonaJobs</b></a>
-<a href="https://ar.indeed.com" target="_blank" class="card" style="text-align:center;padding:15px;text-decoration:none"><b>📱<br>Indeed</b></a>
-</div>
-
-<div class="card">
-<h3>🏢 Ir en persona</h3>
-<p><b>El metodo mas efectivo:</b> Ir de lunes a jueves por la mañana, con el CV impreso, vestido prolijo y con actitud positiva. El 60% de los empleos de primer trabajo se consiguen asi.</p>
-</div>
-
-<div class="warning">
-<b>Derechos laborales que tenes que conocer:</b>
-<ul style="margin-top:10px;padding-left:20px">
-<li>Podes trabajar desde los <b>16 años</b> con autorizacion de tus padres</li>
-<li>Tenes derecho a estar <b>registrado (en blanco)</b></li>
-<li>Si trabajas en negro: no tenes ART, no acumulas jubilacion</li>
-<li>Ministerio de Trabajo de Mendoza: <b>0800-999-2225</b></li>
-</ul>
-</div>
-</section>
-<section id="cv" style="background:#fff">
-<span class="tag">Tu CV Personal</span>
-<h2>Construi tu CV ahora</h2>
-<p>Completa cada campo y al final tendras tu CV listo para imprimir.</p>
-
-<div style="background:#f0f7fa;padding:12px;border-radius:10px;margin:15px 0">
-<b>Prof. Sandra Agüero</b> · Coordinadora de Lengua y Comunicacion · E.A. N°4-264
-</div>
-
-<div id="cvForm">
-<div id="cvStep1">
-<h3>1. Datos personales</h3>
-<label>Nombre completo</label>
-<input type="text" id="cvNombre" placeholder="Ej: Maria Gonzalez">
-
-<label>Ciudad y provincia</label>
-<input type="text" id="cvCiudad" placeholder="Ej: Arroyito, Lavalle, Mendoza">
-
-<label>Telefono / WhatsApp</label>
-<input type="text" id="cvTelefono" placeholder="Ej: 261-123-4567">
-
-<label>Email</label>
-<input type="email" id="cvEmail" placeholder="nombre.apellido@gmail.com">
-
-<div class="tip" style="margin-top:12px">
-<b>Consejo:</b> Crea un email profesional. Evita mails como "pekeña2007".
-</div>
-
-<button onclick="cvNext(2)">Siguiente →</button>
-</div>
-
-<div id="cvStep2" class="hidden">
-<h3>2. Perfil profesional</h3>
-<p>3 oraciones sobre quien sos y que buscas.</p>
-<textarea id="cvPerfil" rows="4" placeholder="Ej: Egresada del secundario con experiencia en atencion al publico. Me destaco por mi comunicacion clara y trabajo en equipo. Busco incorporarme a un equipo de ventas."></textarea>
-
-<div class="tip">
-<b>Ejemplo:</b> "Egresada del secundario con experiencia en atencion al publico. Me destaco por mi comunicacion clara. Busco un equipo donde pueda aprender y aportar."
-</div>
-
-<button onclick="cvPrev(1)">← Anterior</button>
-<button onclick="cvNext(3)">Siguiente →</button>
-</div>
-
-<div id="cvStep3" class="hidden">
-<h3>3. Formacion academica</h3>
-<label>Escuela y año de egreso</label>
-<input type="text" id="cvEscuela" placeholder="Ej: E.A. N°4-264 Sin Nombre - Egreso 2026">
-
-<label>Titulo obtenido</label>
-<input type="text" id="cvTitulo" placeholder="Ej: Bachiller con orientacion en...">
-
-<label>¿Estas estudiando algo mas? (opcional)</label>
-<input type="text" id="cvEstudiando" placeholder="Ej: Curso de computacion...">
-
-<label>Cursos o talleres (opcional)</label>
-<textarea id="cvCursos" rows="2" placeholder="Ej: Primeros auxilios, electricidad basica, ingles..."></textarea>
-
-<div class="tip">
-<b>Consejo:</b> Cualquier curso cuenta: computacion, cocina, electricidad, idiomas. ¡Ponelos todos!
-</div>
-
-<button onclick="cvPrev(2)">← Anterior</button>
-<button onclick="cvNext(4)">Siguiente →</button>
-</div>
-
-<div id="cvStep4" class="hidden">
-<h3>4. Experiencia laboral</h3>
-<p>¿No tenes trabajo formal? No importa. Todo cuenta: changas, campo, cuidado de personas.</p>
-
-<label>Experiencia 1</label>
-<input type="text" id="cvExp1Titulo" placeholder="Ej: Ayuda en cosecha de uva - Bodega Los Andes">
-<textarea id="cvExp1Desc" rows="2" placeholder="Describi que hiciste..."></textarea>
-
-<label>Experiencia 2 (opcional)</label>
-<input type="text" id="cvExp2Titulo" placeholder="Ej: Cuidado de hermanos menores">
-<textarea id="cvExp2Desc" rows="2" placeholder="Describi que hiciste..."></textarea>
-
-<div class="tip">
-<b>Ideas si no tenes experiencia formal:</b> Ayuda en el campo · Cuidado de hermanos · Venta de productos · Colaboracion en eventos · Rol en la escuela
-</div>
-
-<button onclick="cvPrev(3)">← Anterior</button>
-<button onclick="cvNext(5)">Siguiente →</button>
-</div>
-
-<div id="cvStep5" class="hidden">
-<h3>5. Habilidades</h3>
-<p>Mantené presionada la tecla Ctrl para seleccionar varias:</p>
-
-<label>Habilidades blandas</label>
-<select id="cvSoft" multiple size="6" style="height:auto">
-<option>Trabajo en equipo</option>
-<option>Comunicacion clara</option>
-<option>Responsabilidad y puntualidad</option>
-<option>Resolucion de problemas</option>
-<option>Adaptabilidad</option>
-<option>Proactividad</option>
-<option>Empatia y escucha activa</option>
-<option>Liderazgo</option>
-</select>
-
-<label>Habilidades tecnicas</label>
-<select id="cvTech" multiple size="6" style="height:auto">
-<option>Celular y WhatsApp</option>
-<option>Word y Excel basico</option>
-<option>Redes sociales</option>
-<option>Maquinaria agricola</option>
-<option>Licencia conducir B</option>
-<option>Ingles basico</option>
-<option>Canva y diseño basico</option>
-<option>Primeros auxilios</option>
-</select>
-
-<label>Otras habilidades</label>
-<textarea id="cvOtras" rows="2" placeholder="Ej: Cocina, electricidad basica..."></textarea>
-
-<button onclick="cvPrev(4)">← Anterior</button>
-<button onclick="cvNext(6)">Siguiente →</button>
-</div>
-
-<div id="cvStep6" class="hidden">
-<h3>6. Referencias personales</h3>
-<p>2 personas que puedan hablar bien de vos. Avisales antes.</p>
-
-<label>Referencia 1</label>
-<input type="text" id="cvRef1Nom" placeholder="Nombre completo" style="margin-bottom:5px">
-<input type="text" id="cvRef1Cargo" placeholder="Cargo / Relacion" style="margin-bottom:5px">
-<input type="text" id="cvRef1Tel" placeholder="Telefono">
-
-<label>Referencia 2 (opcional)</label>
-<input type="text" id="cvRef2Nom" placeholder="Nombre completo" style="margin-bottom:5px">
-<input type="text" id="cvRef2Cargo" placeholder="Cargo / Relacion" style="margin-bottom:5px">
-<input type="text" id="cvRef2Tel" placeholder="Telefono">
-
-<div class="tip">
-<b>Quien puede ser tu referencia:</b> Docente · Director/a · Encargado de finca · Vecino con negocio. No uses familiares directos.
-</div>
-
-<button onclick="cvPrev(5)">← Anterior</button>
-<button onclick="generarCV()" style="background:#28a745">✨ Ver mi CV</button>
-</div>
-</div>
-
-<div id="cvPreviewBox" class="hidden">
-<div class="cv-preview" id="cvPreviewContent"></div>
-<div style="text-align:center;margin-top:15px">
-<button onclick="descargarCV()" style="background:#e8b923;color:#1a1a2e">📄 Imprimir / Guardar como PDF</button>
-<button onclick="editarCV()">✏️ Editar</button>
-<button onclick="reiniciarCV()">🔄 Empezar de nuevo</button>
-</div>
-</div>
-</section>
-
-<section id="entrevista">
-<span class="tag">Guia para la entrevista</span>
-<h2>Como pasar tu primera entrevista</h2>
-
-<div class="tip">
-<b>Antes de ir:</b> Investiga la empresa. Llega 10 minutos antes. Lleva tu CV impreso (2 copias). Vestite prolijo/a. Apaga el celular.
-</div>
-
-<div class="card">
-<h3>❓ "Contame sobre vos"</h3>
-<p><b>Es la pregunta mas comun.</b> Preparate 4 oraciones: quien sos, donde estudiaste, que experiencia tenes y que buscas.</p>
-<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
-"Me llamo Valentina, soy egresada de la Escuela Albergue N°4-264 de Arroyito. Trabaje en cosecha y cuidado de personas. Me destaco por ser responsable y aprender rapido. Busco un trabajo donde pueda crecer."
-</div>
-<p style="color:#666;font-size:13px">💡 Practicalo en voz alta. No mas de 60 segundos.</p>
-</div>
-
-<div class="card">
-<h3>❓ "¿Por que queres trabajar aca?"</h3>
-<p><b>Investiga la empresa antes de ir. Nombrá algo especifico de ellos.</b></p>
-<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
-"Porque me interesa el rubro de la salud y vi que su empresa tiene buen ambiente de trabajo. Quiero aprender de profesionales con experiencia."
-</div>
-<p style="color:#c75b39;font-size:13px">🚫 Nunca digas solo "porque necesito trabajar".</p>
-</div>
-
-<div class="card">
-<h3>❓ "¿Cuales son tus puntos debiles?"</h3>
-<p><b>Nombrá una debilidad REAL que estes trabajando para mejorar.</b></p>
-<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
-"Tengo que mejorar mi manejo del tiempo cuando tengo muchas tareas. Por eso empece a usar una agenda."
-</div>
-<p style="color:#c75b39;font-size:13px">🚫 Nunca digas "soy perfeccionista".</p>
-</div>
-
-<div class="card">
-<h3>❓ "¿Donde te ves en 5 años?"</h3>
-<p><b>Mostrá ambicion realista.</b></p>
-<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
-"Me veo con una carrera universitaria en curso, habiendo crecido dentro de la empresa y con mas responsabilidades."
-</div>
-</div>
-
-<div class="card">
-<h3>❓ "¿Tenes alguna pregunta para nosotros?"</h3>
-<p><b>Siempre pregunta algo. Muestra interes real.</b></p>
-<div style="background:#fffde7;padding:12px;border-radius:8px;border-left:4px solid #e8b923;margin:10px 0;font-style:italic">
-"¿Como es el proceso de induccion?" / "¿Cuales son las posibilidades de crecimiento?" / "¿Como es el equipo de trabajo?"
-</div>
-</div>
-
-<div class="warning">
-<b>🚫 Lo que NUNCA haces en una entrevista:</b>
-<ul style="margin-top:10px;padding-left:20px">
-<li>Llegar tarde (si vas a llegar tarde, avisa antes)</li>
-<li>Mirar el celular</li>
-<li>Hablar mal de trabajos o escuelas anteriores</li>
-<li>Mentir sobre tu experiencia</li>
-<li>No preguntar nada al final</li>
-<li>Ir sin saber nada de la empresa</li>
-</ul>
-</div>
-</section>
-
-<section id="mercado" style="background:#fff">
-<span class="tag">Mercado Laboral 2026</span>
-<h2>Donde esta el trabajo HOY</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:20px 0">
-<div class="card" style="text-align:center">
-<div style="font-size:42px;font-weight:900;color:#1a5f7a">72%</div>
-<p>de las empresas en Mendoza buscan jovenes con secundario completo</p>
-</div>
-<div class="card" style="text-align:center">
-<div style="font-size:42px;font-weight:900;color:#1a5f7a">4x</div>
-<p>mas gana un tecnico calificado que uno sin titulo en 5 años</p>
-</div>
-</div>
-
-<h3 style="margin:20px 0 10px">Sectores con mayor demanda 2026-2035</h3>
-
-<div class="card">
-<h3>🤖 Inteligencia Artificial y Datos <span class="salary">98% demanda</span></h3>
-<p>Programadores, analistas de datos y especialistas en IA son los perfiles mas buscados. Argentina exporta talento tecnologico.</p>
-</div>
-
-<div class="card">
-<h3>🛢️ Petroleo, Gas y Mineria <span class="salary">90% demanda</span></h3>
-<p>Mendoza tiene yacimientos activos. Las empresas pagan de los mejores sueldos.</p>
-</div>
-
-<div class="card">
-<h3>🏥 Salud y Bienestar <span class="salary">92% demanda</span></h3>
-<p>Enfermeria, kinesiologia, nutricion. Carreras cortas como Auxiliar de Enfermeria (18 meses) ya dan trabajo inmediato.</p>
-</div>
-
-<div class="card">
-<h3>🌾 Agropecuario y Agronegocios <span class="salary">85% demanda</span></h3>
-<p>Drones, sensores, riego inteligente. Un agronomo con tecnologia puede trabajar desde cualquier lugar del mundo.</p>
-</div>
-
-<div class="card">
-<h3>💰 Finanzas y Contabilidad <span class="salary">83% demanda</span></h3>
-<p>La digitalizacion financiera (fintech, criptomonedas) abrio nuevos perfiles hibridos.</p>
-</div>
-
-<div class="card">
-<h3>🔧 Oficios Calificados <span class="salary">88% demanda</span></h3>
-<p>Electricistas, plomeros, soldadores. Un electricista habilitado puede ganar mas que muchos profesionales universitarios.</p>
-</div>
-
-<div class="card">
-<h3>🌞 Energias Renovables <span class="salary">78% demanda</span></h3>
-<p>Mendoza lidera la inversion en solar y eolica. Tecnicos escasos y muy bien pagados.</p>
-</div>
-
-<div class="tip">
-<b>Sectores que van a cambiar mucho:</b> La IA va a reemplazar trabajos repetitivos (cajeros, call center) pero va a crear nuevos: supervisores de IA, especialistas en prompts. La clave es formarse en habilidades que las maquinas no pueden reemplazar.
-</div>
-
-<h3 style="margin:25px 0 10px">Las 8 habilidades mas valoradas</h3>
-<ol style="padding-left:25px;line-height:2">
-<li><b>Comunicacion clara</b></li>
-<li><b>Trabajo en equipo</b></li>
-<li><b>Adaptabilidad</b></li>
-<li><b>Proactividad</b></li>
-<li><b>Manejo de herramientas digitales</b></li>
-<li><b>Responsabilidad y puntualidad</b></li>
-<li><b>Resolucion de problemas</b></li>
-<li><b>Capacidad de aprendizaje continuo</b></li>
-</ol>
-</section>
-
-<section id="motivacion">
-<span class="tag">Motivacion</span>
-<h2>Lo que nadie te dice antes de empezar</h2>
-
-<div class="quote">"No te compares con los demas. Comparate con quien eras ayer."<br><span style="font-size:14px;color:#666;font-style:normal">— Jordan B. Peterson</span></div>
-
-<div class="quote">"La educacion es el arma mas poderosa que podes usar para cambiar el mundo."<br><span style="font-size:14px;color:#666;font-style:normal">— Nelson Mandela</span></div>
-
-<div class="quote">"Veni de un lugar sin recursos no te limita. Te da una resistencia que la mayoria nunca va a tener."<br><span style="font-size:14px;color:#666;font-style:normal">— Anonimo rural</span></div>
-
-<h3 style="margin:20px 0 10px">Verdades que necesitas saber</h3>
-
-<div class="card">
-<h3>🚀 No hay un unico camino correcto</h3>
-<p>La universidad no es para todos. Hay personas que trabajaron 2 años, ahorraron, y entraron a la facultad con mas claridad.</p>
-</div>
-
-<div class="card">
-<h3>💡 El primer trabajo no es el trabajo de tu vida</h3>
-<p>El 80% de los profesionales cambia de rubro al menos una vez. Lo que aprendes en cada trabajo te sirve aunque cambies de area.</p>
-</div>
-
-<div class="card">
-<h3>📍 Venir de zonas rurales tiene ventajas reales</h3>
-<p>Tenes capacidad de adaptacion y conocimiento del trabajo fisico que la mayoria no tiene.</p>
-</div>
-
-<h3 style="margin:25px 0 10px">Historias reales</h3>
-
-<div class="story">
-<h4>👩 Valentina R., 24 años — Egresada rural → Enfermera</h4>
-<p style="font-style:italic">"Vengo de una zona sin luz electrica. Estudiaba con vela. Me decian que la universidad no era para chicos del campo. Hoy soy enfermera con trabajo fijo. Lo unico que necesitas es no escuchar a quienes no creen en vos."</p>
-</div>
-
-<div class="story">
-<h4>👨 Rodrigo M., 26 años — Arroyito → Tecnico Electricista · Emprendedor</h4>
-<p style="font-style:italic">"Termine la escuela sin saber que queria. Empece un curso de electricidad en el INAT porque era gratuito. A los 8 meses tenia trabajo. Hoy tengo mi propio negocio y 3 empleados."</p>
-</div>
-
-<div class="story">
-<h4>👩 Camila F., 22 años — CENS → 3° año Administracion UNCuyo</h4>
-<p style="font-style:italic">"Termine el secundario de noche trabajando de dia. Me daba verguenza anotarme en la UNCuyo. Me anote igual. Hoy estoy en tercer año y trabajo en RRHH. La verguenza era el unico obstaculo real."</p>
-</div>
-
-<div class="tip" style="text-align:center">
-<h3>🧭 3 cosas que podes hacer esta semana</h3>
-<ol style="text-align:left;max-width:450px;margin:15px auto;padding-left:20px">
-<li><b>Hace el test vocacional</b> de esta pagina y guarda el resultado.</li>
-<li><b>Habla con una persona</b> que ya este haciendo lo que vos queres hacer.</li>
-<li><b>Anota en papel</b> (no en el celular) una meta concreta para los proximos 12 meses.</li>
-</ol>
-</div>
-</section>
-
-<footer>
-<div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1a5f7a,#2a8faf);display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:24px">👩‍🏫</div>
-<h3>Prof. Sandra Agüero</h3>
-<p>Coordinadora de Lengua y Comunicacion<br>E.A. N°4-264 "Sin Nombre" · Arroyito, Lavalle · 2026</p>
-<p style="opacity:0.6;font-size:13px;margin-top:15px">Material elaborado con ❤️ para los egresados 2026</p>
-</footer>
 
 <script>
-const preguntas=[
-{q:"¿Que preferis hacer en tu tiempo libre?",o:[{t:"Armar o reparar cosas",v:"R"},{t:"Investigar y analizar",v:"I"},{t:"Dibujar, escribir o crear",v:"A"},{t:"Ayudar a alguien",v:"S"},{t:"Organizar o liderar",v:"E"},{t:"Ordenar y clasificar",v:"C"}]},
-{q:"En un trabajo ideal, ¿que es lo mas importante?",o:[{t:"Trabajar al aire libre",v:"R"},{t:"Resolver problemas complejos",v:"I"},{t:"Expresar creatividad",v:"A"},{t:"Ayudar a otros",v:"S"},{t:"Tomar decisiones",v:"E"},{t:"Seguir procedimientos",v:"C"}]},
-{q:"¿Que materia te gustaba mas?",o:[{t:"Educacion fisica o taller",v:"R"},{t:"Matematica o fisica",v:"I"},{t:"Plastica o musica",v:"A"},{t:"Ciencias sociales",v:"S"},{t:"Historia",v:"E"},{t:"Contabilidad",v:"C"}]},
-{q:"¿Como te describirian tus amigos?",o:[{t:"Practico y resolutivo",v:"R"},{t:"Curioso y analitico",v:"I"},{t:"Creativo y original",v:"A"},{t:"Cariñoso y comprensivo",v:"S"},{t:"Seguro y decidido",v:"E"},{t:"Organizado y responsable",v:"C"}]},
-{q:"¿Que ambiente de trabajo preferis?",o:[{t:"Taller o campo",v:"R"},{t:"Laboratorio",v:"I"},{t:"Estudio de arte",v:"A"},{t:"Hospital o escuela",v:"S"},{t:"Oficina de direccion",v:"E"},{t:"Oficina administrativa",v:"C"}]},
-{q:"¿Que te resulta mas satisfactorio?",o:[{t:"Ver algo funcionando",v:"R"},{t:"Descubrir algo nuevo",v:"I"},{t:"Crear algo unico",v:"A"},{t:"Ver a alguien mejorar",v:"S"},{t:"Lograr una meta",v:"E"},{t:"Completar una tarea bien",v:"C"}]},
-{q:"¿Como preferis aprender?",o:[{t:"Con las manos",v:"R"},{t:"Leyendo",v:"I"},{t:"Practicando libremente",v:"A"},{t:"Con alguien que me guie",v:"S"},{t:"Asumiendo desafios",v:"E"},{t:"Con manual paso a paso",v:"C"}]},
-{q:"¿Que te molesta mas?",o:[{t:"Estar sentado todo el dia",v:"R"},{t:"Tareas repetitivas",v:"I"},{t:"Reglas sin creatividad",v:"A"},{t:"Trabajar solo",v:"S"},{t:"No decidir",v:"E"},{t:"Desorden",v:"C"}]},
-{q:"¿Que habilidad desarrollarias?",o:[{t:"Manejar maquinaria",v:"R"},{t:"Programar",v:"I"},{t:"Diseñar o actuar",v:"A"},{t:"Escuchar y aconsejar",v:"S"},{t:"Negociar",v:"E"},{t:"Organizar datos",v:"C"}]},
-{q:"¿Que haces en grupo?",o:[{t:"Construir algo",v:"R"},{t:"Discutir ideas",v:"I"},{t:"Crear una obra",v:"A"},{t:"Ayudar al que necesita",v:"S"},{t:"Dirigir",v:"E"},{t:"Organizar tareas",v:"C"}]},
-{q:"¿Que pelicula preferis?",o:[{t:"Accion o aventura",v:"R"},{t:"Documental o sci-fi",v:"I"},{t:"Drama o arte",v:"A"},{t:"Superacion humana",v:"S"},{t:"Negocios o politica",v:"E"},{t:"Policial",v:"C"}]},
-{q:"Si ganaras la loteria...",o:[{t:"Comprar un taller",v:"R"},{t:"Financiar ciencia",v:"I"},{t:"Dedicarme al arte",v:"A"},{t:"Ayudar a mi comunidad",v:"S"},{t:"Invertir en negocio",v:"E"},{t:"Organizar finanzas",v:"C"}]},
-{q:"Ante los desafios...",o:[{t:"Accion directa",v:"R"},{t:"Analisis profundo",v:"I"},{t:"Creatividad",v:"A"},{t:"Trabajo en equipo",v:"S"},{t:"Oportunidad",v:"E"},{t:"Pasos ordenados",v:"C"}]},
-{q:"¿Que valoras en una persona?",o:[{t:"Capacidad de hacer",v:"R"},{t:"Inteligencia",v:"I"},{t:"Originalidad",v:"A"},{t:"Bondad",v:"S"},{t:"Ambicion",v:"E"},{t:"Puntualidad",v:"C"}]},
-{q:"¿Que preferis leer?",o:[{t:"Manuales tecnicos",v:"R"},{t:"Ciencia",v:"I"},{t:"Novelas",v:"A"},{t:"Biografias",v:"S"},{t:"Negocios",v:"E"},{t:"Actualidad",v:"C"}]},
-{q:"¿Como preferis que te evaluen?",o:[{t:"Resultados concretos",v:"R"},{t:"Razonamiento",v:"I"},{t:"Originalidad",v:"A"},{t:"Ayuda a otros",v:"S"},{t:"Objetivos",v:"E"},{t:"Cumplimiento",v:"C"}]},
-{q:"¿Que hay en tu escritorio ideal?",o:[{t:"Herramientas",v:"R"},{t:"Libros y PC",v:"I"},{t:"Materiales de arte",v:"A"},{t:"Fotos de familia",v:"S"},{t:"Trofeos",v:"E"},{t:"Agenda y calculadora",v:"C"}]},
-{q:"¿Algo se rompe en tu casa?",o:[{t:"Lo arreglo yo",v:"R"},{t:"Investigo primero",v:"I"},{t:"Rediseño",v:"A"},{t:"Pido ayuda",v:"S"},{t:"Contrato experto",v:"E"},{t:"Busco el manual",v:"C"}]},
-{q:"En 10 años te ves...",o:[{t:"Con mi taller",v:"R"},{t:"Experto en algo",v:"I"},{t:"Viviendo del arte",v:"A"},{t:"Ayudando a muchos",v:"S"},{t:"Con mi empresa",v:"E"},{t:"Carrera estable",v:"C"}]},
-{q:"¿Que regalas?",o:[{t:"Algo hecho a mano",v:"R"},{t:"Un libro",v:"I"},{t:"Algo artistico",v:"A"},{t:"Una experiencia",v:"S"},{t:"Algo util",v:"E"},{t:"Una tarjeta",v:"C"}]}
+// ===== DATOS DE ACTIVIDADES POR AÑO =====
+const ACTIVIDADES = {
+  1: {
+    titulo: "1° Año — Clases de Palabras",
+    actividades: [
+      {
+        id:"a1_1", titulo:"Sustantivos: clasificación",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Cuál de las siguientes palabras es un sustantivo PROPIO?", ops:["ciudad","Buenos Aires","mesa","felicidad"], c:1},
+          {p:"¿Qué tipo de sustantivo es 'amor'?", ops:["Concreto individual","Concreto colectivo","Abstracto","Propio"], c:2},
+          {p:"La palabra 'manada' es un sustantivo:", ops:["propio","abstracto","colectivo","individual"], c:2},
+          {p:"¿Cuál es un sustantivo CONCRETO INDIVIDUAL?", ops:["bondad","tristeza","silla","gente"], c:2},
+        ]
+      },
+      {
+        id:"a1_2", titulo:"Adjetivos calificativos y gentilicios",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"En 'casa grande', ¿qué tipo de adjetivo es 'grande'?", ops:["Gentilicio","Numeral","Calificativo","Posesivo"], c:2},
+          {p:"¿Cuál es un adjetivo GENTILICIO?", ops:["hermoso","mendocino","rápido","brillante"], c:1},
+          {p:"'Dos libros' → el adjetivo 'dos' es:", ops:["calificativo","numeral","demostrativo","posesivo"], c:1},
+          {p:"En 'mi perro', 'mi' es un adjetivo:", ops:["calificativo","numeral","posesivo","demostrativo"], c:2},
+        ]
+      },
+      {
+        id:"a1_3", titulo:"Conjugación verbal: tiempo y persona",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"'Ellos corrieron' está en tiempo:", ops:["Presente","Pretérito perfecto simple","Futuro","Pretérito imperfecto"], c:1},
+          {p:"¿En qué persona está 'vosotros cantáis'?", ops:["1° plural","2° singular","2° plural","3° plural"], c:2},
+          {p:"'Yo estudiaré' está en:", ops:["Presente indicativo","Pretérito imperfecto","Futuro simple","Condicional"], c:2},
+          {p:"El modo que expresa órdenes o mandatos es:", ops:["Indicativo","Subjuntivo","Imperativo","Condicional"], c:2},
+        ]
+      },
+    ]
+  },
+  2: {
+    titulo: "2° Año — Pronombres y Verboides",
+    actividades: [
+      {
+        id:"a2_1", titulo:"Pronombres personales",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"En 'Ella llegó tarde', el pronombre reemplaza a:", ops:["un verbo","un sustantivo femenino","un adjetivo","un adverbio"], c:1},
+          {p:"¿Cuál de estos es pronombre PERSONAL?", ops:["este","cuyo","yo","alguien"], c:2},
+          {p:"'Te llamé' → 'te' es pronombre:", ops:["reflexivo","personal OI/OD","posesivo","demostrativo"], c:1},
+          {p:"¿Qué tipo de pronombre es 'aquel'?", ops:["Personal","Posesivo","Demostrativo","Indefinido"], c:2},
+        ]
+      },
+      {
+        id:"a2_2", titulo:"Verboides: infinitivo, gerundio, participio",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Cuál es un INFINITIVO?", ops:["corriendo","corrido","correr","corre"], c:2},
+          {p:"'Habiendo comido' → el verboide subrayado es:", ops:["Infinitivo compuesto","Gerundio compuesto","Participio","Gerundio simple"], c:1},
+          {p:"El PARTICIPIO se usa para formar tiempos:", ops:["simples del indicativo","compuestos con haber","del subjuntivo","del imperativo"], c:1},
+          {p:"'Cantando' funciona sintácticamente como:", ops:["sustantivo","adjetivo","adverbio","ninguno"], c:2},
+        ]
+      },
+      {
+        id:"a2_3", titulo:"Conectores y cohesión textual",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"'Sin embargo' es un conector:", ops:["aditivo","causal","adversativo","consecutivo"], c:2},
+          {p:"¿Qué conector expresa CAUSA?", ops:["por lo tanto","porque","aunque","además"], c:1},
+          {p:"'Llovió, por eso no salimos' → conector:", ops:["causal","adversativo","consecutivo","aditivo"], c:2},
+          {p:"El conector 'también' indica:", ops:["oposición","adición","consecuencia","condición"], c:1},
+        ]
+      }
+    ]
+  },
+  3: {
+    titulo: "3° Año — Texto Expositivo y Cuento Policial",
+    actividades: [
+      {
+        id:"a3_1", titulo:"Texto expositivo: características y estructura",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Cuál es la función principal del texto expositivo?", ops:["Convencer al lector de una opinión","Narrar una historia de ficción","Informar y explicar un tema de manera objetiva","Expresar emociones del autor"], c:2},
+          {p:"¿Cuál de estas NO es una característica del texto expositivo?", ops:["Uso de vocabulario técnico o preciso","Presencia de recursos literarios como metáforas y rimas","Organización lógica de la información","Empleo de definiciones y ejemplos"], c:1},
+          {p:"La estructura típica del texto expositivo es:", ops:["Inicio, nudo y desenlace","Presentación, desarrollo y conclusión","Tesis, argumentos y refutación","Situación inicial, complicación y resolución"], c:1},
+          {p:"El texto de divulgación científica está dirigido a:", ops:["Especialistas en el tema","El público general, sin conocimientos previos","Solo estudiantes universitarios","Investigadores del área"], c:1},
+          {p:"¿Cuál de estos recursos es propio del texto expositivo?", ops:["Diálogos entre personajes","Definiciones, ejemplos y comparaciones","Suspenso y misterio","Descripción de paisajes fantásticos"], c:1},
+        ]
+      },
+      {
+        id:"a3_2", titulo:"Texto de divulgación científica: análisis",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿En qué se diferencia un texto científico de uno de divulgación?", ops:["El científico es más corto","El de divulgación usa lenguaje accesible para el público general","El de divulgación solo incluye datos","El científico no tiene conclusiones"], c:1},
+          {p:"¿Qué función del lenguaje predomina en el texto expositivo-divulgativo?", ops:["Función apelativa","Función poética","Función referencial o informativa","Función emotiva"], c:2},
+          {p:"Las notas al pie, gráficos e imágenes en un texto de divulgación sirven para:", ops:["Decorar el texto","Ampliar o ilustrar la información principal","Reemplazar el texto escrito","Contradecir las ideas del autor"], c:1},
+          {p:"¿Cuál de estos sería un texto de divulgación científica?", ops:["Un poema sobre la naturaleza","Un artículo de revista que explica cómo funciona el cerebro","Una carta de amor","Una obra de teatro sobre científicos"], c:1},
+          {p:"El paratexto en un texto expositivo incluye:", ops:["Solo las imágenes","Título, subtítulos, epígrafes, notas e imágenes","Solo el índice","Solo las definiciones"], c:1},
+        ]
+      },
+      {
+        id:"a3_3", titulo:"El cuento policial: género y características",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Cuál es el elemento central que organiza la trama en un cuento policial?", ops:["Un viaje del héroe","Un enigma o crimen a resolver","Un romance entre personajes","Un conflicto con la naturaleza"], c:1},
+          {p:"¿Qué función cumple el detective o investigador en el cuento policial?", ops:["Cometer el crimen","Narrar la historia desde afuera","Descubrir la verdad usando la razón y las pistas","Ser la víctima del relato"], c:2},
+          {p:"El modelo del 'cuarto cerrado' en el policial clásico se refiere a:", ops:["Una habitación que aparece en todos los relatos","Un crimen que parece imposible de cometer","El lugar donde vive el detective","El archivo donde se guardan los casos"], c:1},
+          {p:"¿Quién es considerado el creador del género policial moderno?", ops:["Jorge Luis Borges","Agatha Christie","Edgar Allan Poe","Arthur Conan Doyle"], c:2},
+          {p:"En el policial clásico, el narrador suele:", ops:["Revelar al culpable desde el inicio","Ser omnisciente y conocer todo","Acompañar al detective sin conocer la solución","Ser el mismo culpable"], c:2},
+        ]
+      }
+    ]
+  },
+  4: {
+    titulo: "4° Año — Literatura Precolombina y Género Narrativo",
+    actividades: [
+      {
+        id:"a4_1", titulo:"Literatura precolombina: contexto y características",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Qué se entiende por literatura precolombina?", ops:["La literatura escrita durante la colonia española","Las obras creadas por los pueblos originarios de América antes de la conquista europea","Los textos que los colonizadores trajeron de Europa","Las crónicas escritas por conquistadores"], c:1},
+          {p:"¿Cuál es una característica distintiva de la literatura precolombina?", ops:["Estaba escrita exclusivamente en castellano","Combinaba elementos religiosos, cosmogónicos y comunitarios","Era exclusivamente individual y lírica","Imitaba los géneros literarios europeos"], c:1},
+          {p:"¿Qué función cumplían los relatos precolombinos en las comunidades originarias?", ops:["Entretener sin ningún otro propósito","Preservar la identidad, la cosmovisión y la memoria colectiva","Registrar impuestos y transacciones","Describir técnicas de guerra"], c:1},
+          {p:"¿En qué soporte se transmitía gran parte de la literatura precolombina antes de la escritura europea?", ops:["Papiro","Tradición oral, cantos y rituales","Libros de pergamino","Pinturas en tela"], c:1},
+          {p:"Las civilizaciones Maya, Azteca e Inca son ejemplos de culturas con:", ops:["Ausencia de expresión literaria","Ricas tradiciones orales y textuales propias","Literatura idéntica entre sí","Escritura alfabética similar a la europea"], c:1},
+        ]
+      },
+      {
+        id:"a4_2", titulo:"El Popol Vuh: lectura y análisis",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿A qué pueblo originario pertenece el Popol Vuh?", ops:["Azteca","Inca","Maya quiché","Mapuche"], c:2},
+          {p:"¿Qué tipo de texto es el Popol Vuh?", ops:["Una crónica histórica de la conquista","Un libro sagrado con relatos de creación, héroes y origen del pueblo maya","Una colección de poemas líricos","Un tratado político"], c:1},
+          {p:"En el Popol Vuh, los dioses crean a los seres humanos a partir de:", ops:["Barro y fuego","Piedra y agua","Maíz","Madera y sangre"], c:2},
+          {p:"Los Héroes Gemelos (Hunahpú e Ixbalanqué) del Popol Vuh:", ops:["Son villanos que destruyen el mundo","Vencen a los señores del inframundo (Xibalbá)","Crean a los primeros seres humanos","Fundan la ciudad de Copán"], c:1},
+          {p:"¿Por qué el Popol Vuh es considerado un texto literario y no solo religioso?", ops:["Porque no menciona a ningún dios","Porque tiene personajes, conflictos, tramas y recursos narrativos propios de la literatura","Porque fue escrito por un autor europeo","Porque es una obra de teatro"], c:1},
+        ]
+      },
+      {
+        id:"a4_3", titulo:"El cuento: género narrativo y sus características",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Cuál es la principal diferencia entre cuento y novela?", ops:["El cuento siempre es fantástico y la novela realista","El cuento es breve, con pocos personajes y una sola línea argumental; la novela es extensa y compleja","El cuento es oral y la novela escrita","No hay diferencias, son géneros equivalentes"], c:1},
+          {p:"¿Qué elemento distingue al narrador en primera persona?", ops:["Conoce todos los pensamientos de los personajes","Participa como personaje en la historia que cuenta","Narra desde fuera sin involucrarse","Solo describe el escenario"], c:1},
+          {p:"El 'clímax' en la estructura narrativa es:", ops:["El momento inicial en que se presenta el contexto","El punto de máxima tensión o conflicto del relato","La resolución final del problema","La descripción del protagonista"], c:1},
+          {p:"¿Qué es el 'narrador omnisciente'?", ops:["Un personaje que sabe todo dentro de la historia","Un narrador externo que conoce pensamientos, sentimientos y acciones de todos los personajes","Un narrador que solo relata lo que ve","El autor del cuento"], c:1},
+          {p:"El espacio y el tiempo en el relato contribuyen a:", ops:["Reemplazar a los personajes","Crear verosimilitud y situar la acción en un contexto concreto","Distraer al lector de la trama","Solo decorar el texto"], c:1},
+        ]
+      }
+    ]
+  },
+  5: {
+    titulo: "5° Año — Poesía de Autoras Argentinas y Literatura de Denuncia",
+    actividades: [
+      {
+        id:"a5_1", titulo:"Poemas de autoras argentinas: voces femeninas",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"Alfonsina Storni fue una poeta argentina que se destacó por:", ops:["Escribir exclusivamente sobre la naturaleza patagónica","Denunciar la desigualdad de género y reivindicar la voz femenina","Pertenecer al movimiento vanguardista experimental","Publicar novelas históricas sobre la independencia"], c:1},
+          {p:"¿Qué movimiento literario influyó principalmente en la poesía de Alfonsina Storni?", ops:["Barroco colonial","Modernismo y posmodernismo","Realismo mágico","Costumbrismo"], c:1},
+          {p:"Alejandra Pizarnik es reconocida por una poesía que explora:", ops:["La vida rural y campesina","El lenguaje como límite, el silencio y los estados interiores extremos","Las tradiciones folclóricas argentinas","La historia política del siglo XIX"], c:1},
+          {p:"El poema 'Tú me quieres blanca' de Storni es una:", ops:["Descripción del paisaje mendocino","Crítica a la doble moral que exige pureza a la mujer","Oda a la naturaleza y la belleza femenina","Narración de un viaje al mar"], c:1},
+          {p:"¿Qué tienen en común las poetas argentinas del siglo XX como Storni y Pizarnik?", ops:["Escribieron en el mismo estilo y sobre los mismos temas","Ninguna publicó en vida","Construyeron una voz poética propia que desafió los roles asignados a la mujer","Solo escribieron poesía infantil"], c:2},
+        ]
+      },
+      {
+        id:"a5_2", titulo:"El Matadero de Echeverría: literatura de denuncia",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Quién es el autor de 'El Matadero'?", ops:["Domingo F. Sarmiento","José Hernández","Esteban Echeverría","Leopoldo Lugones"], c:2},
+          {p:"¿En qué período histórico argentino se sitúa 'El Matadero'?", ops:["La Revolución de Mayo","La época de Juan Manuel de Rosas y la Confederación","La Generación del 80","La Guerra de la Triple Alianza"], c:1},
+          {p:"¿Qué representa el matadero como espacio simbólico en el relato?", ops:["Un lugar de progreso y trabajo digno","El orden y la prosperidad del gobierno de Rosas","Un símbolo de la brutalidad y la violencia del sistema político y social","El campo argentino idealizado"], c:2},
+          {p:"La muerte del joven unitario al final del relato puede interpretarse como:", ops:["Un accidente sin significado político","La victoria del orden sobre el caos","El sometimiento del individuo libre frente a la barbarie del poder autoritario","Un acto heroico del protagonista"], c:2},
+          {p:"¿Por qué 'El Matadero' es considerado un texto fundador de la literatura argentina?", ops:["Porque fue el primer texto escrito en castellano en el Río de la Plata","Porque combina crítica política, denuncia social y recursos literarios en una narrativa pionera","Porque inauguró el Romanticismo en Europa","Porque es el primer texto publicado en una imprenta argentina"], c:1},
+        ]
+      },
+      {
+        id:"a5_3", titulo:"Literatura de denuncia: características y contexto",
+        tipo:"opcion_multiple",
+        preguntas:[
+          {p:"¿Qué caracteriza a la literatura de denuncia como género?", ops:["Presenta una visión idealizada y armoniosa de la sociedad","Usa la escritura para visibilizar injusticias, opresiones y conflictos sociales o políticos","Se centra únicamente en el mundo interior del autor","Evita cualquier referencia a la realidad histórica"], c:1},
+          {p:"En 'El Matadero', Echeverría usa la alegoría para:", ops:["Describir literalmente la vida en un matadero de reses","Representar indirectamente la violencia del régimen político a través de imágenes concretas","Homenajear el trabajo de los gauchos","Comparar Argentina con Europa"], c:1},
+          {p:"¿Qué binomio conceptual propone Sarmiento, contemporáneo de Echeverría, que también aparece en 'El Matadero'?", ops:["Ciudad / Campo","Civilización / Barbarie","Naturaleza / Cultura","Razón / Sentimiento"], c:1},
+          {p:"El narrador en 'El Matadero' adopta una posición:", ops:["Neutral e imparcial","Claramente comprometida con los valores unitarios e ilustrados","A favor del régimen de Rosas","Sin ninguna perspectiva política"], c:1},
+          {p:"¿Por qué es importante leer literatura de denuncia en la actualidad?", ops:["Para entretenerse sin reflexionar","Porque desarrolla la capacidad crítica para identificar injusticias en cualquier época","Porque enseña gramática de manera efectiva","Porque reemplaza el estudio de la historia"], c:1},
+        ]
+      }
+    ]
+  }
+};
+
+// ===== FICHAS DE TRABAJO =====
+const FICHAS = [
+  {anio:"1° Año", titulo:"Clasificación de Sustantivos", desc:"Ficha con ejercicios para identificar y clasificar sustantivos: propios, comunes, concretos, abstractos y colectivos.", contenido: generarFicha1},
+  {anio:"1° Año", titulo:"Conjugación Verbal", desc:"Tabla de conjugación para completar: tiempo, modo y persona.", contenido: generarFicha2},
+  {anio:"2° Año", titulo:"Pronombres y Verboides", desc:"Actividades para reconocer pronombres personales, demostrativos y las formas no personales del verbo.", contenido: generarFicha3},
+  {anio:"3° Año", titulo:"Adverbios y Preposiciones", desc:"Ficha de análisis y clasificación de adverbios y preposiciones en oraciones.", contenido: generarFicha4},
+  {anio:"4° Año", titulo:"Análisis Literario — Popol Vuh", desc:"Guía de lectura y análisis literario del Popol Vuh: contexto precolombino, cosmovisión maya y recursos narrativos.", contenido: generarFicha5},
+  {anio:"5° Año", titulo:"Análisis Literario — El Matadero", desc:"Guía de comprensión crítica y análisis literario de 'El Matadero' de Echeverría: alegoría, denuncia y contexto histórico.", contenido: generarFicha6},
+  {anio:"4° Año", titulo:"Comprensión Lectora — Texto Narrativo", desc:"Ficha guiada con texto modelo y preguntas de comprensión lectora y análisis crítico para 4° año.", contenido: generarFicha7},
+  {anio:"5° Año", titulo:"Comprensión Lectora — Literatura de Denuncia", desc:"Ficha guiada con fragmento literario y actividades de comprensión crítica, análisis del contexto y reflexión personal para 5° año.", contenido: generarFicha8},
 ];
 
-const perfiles={R:{n:"Realista",d:"Te gusta trabajar con herramientas, maquinaria o al aire libre. Sos practico, resolutivo y preferis ver resultados concretos.",c:["Ingenieria civil/mecanica/petrolera","Tecnico electromecanico","Agronomia","Oficios calificados","Perforista minero","Energias renovables"]},I:{n:"Investigativo",d:"Te gusta analizar, investigar y resolver problemas complejos. Sos curioso, logico y disfrutas aprender.",c:["Ingenieria en sistemas","Analisis de datos / IA","Medicina","Biotecnologia","Fisica/Quimica","Investigacion cientifica"]},A:{n:"Artistico",d:"Sos creativo, original y valoras la expresion personal. Te gusta innovar, diseñar y crear.",c:["Diseño grafico/UX","Marketing digital","Arquitectura","Comunicacion audiovisual","Musica/Artes escenicas","Publicidad"]},S:{n:"Social",d:"Te gusta ayudar, enseñar y cuidar de otros. Sos empatico, paciente y disfrutas del contacto humano.",c:["Profesorado/Educacion","Enfermeria/Medicina","Psicologia","Trabajo social","Kinesiologia/Nutricion","Recursos humanos"]},E:{n:"Emprendedor",d:"Sos lider natural, ambicioso y te gusta tomar decisiones. Te motivan los desafios y lograr metas.",c:["Administracion de empresas","Economia/Contador","Direccion de empresas","Marketing y ventas","Gestion publica","Emprendimiento"]},C:{n:"Convencional",d:"Sos organizado, detallista y te gusta seguir procedimientos claros. Valoras la precision y el orden.",c:["Contador publico","Administracion","Analisis de sistemas","Logistica","Banca y finanzas","Gestion documental"]}};
-
-let qAct=0,resp=[],sel=null;
-
-function mostrarQ(){
-const p=preguntas[qAct];
-let h="";
-p.o.forEach((o,i)=>{
-h+=`<button class="option-btn${sel===i?' selected':''}" onclick="elegir(${i})"><b style="display:inline-block;width:26px;height:26px;background:#1a5f7a;color:#fff;border-radius:50%;text-align:center;line-height:26px;margin-right:8px;font-size:13px">${String.fromCharCode(65+i)}</b>${o.t}</button>`;
-});
-document.getElementById('qtext').innerHTML=p.q;
-document.getElementById('qopts').innerHTML=h;
-document.getElementById('qnum').innerHTML=`<b>Pregunta ${qAct+1} de ${preguntas.length}</b>`;
-document.getElementById('prog').style.width=((qAct+1)/preguntas.length*100)+"%";
-document.getElementById('btnPrev').disabled=qAct===0;
-document.getElementById('btnNext').disabled=sel===null;
-document.getElementById('btnNext').innerHTML=qAct===preguntas.length-1?'Ver resultados':'Siguiente';
+function generarFicha1(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Sustantivos</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#1d4ed8;border-bottom:2px solid #1d4ed8;padding-bottom:8px}h2{color:#374151;margin-top:20px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#dbeafe}tr:nth-child(even){background:#f8fafc}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}.espacio{height:20px}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📝 Ficha de Trabajo — Sustantivos</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 1° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>1. Clasificá los siguientes sustantivos en la tabla</h2>
+<p><i>Palabras:</i> <b>Argentina · felicidad · manada · mesa · Mendoza · amor · estudiantes · libro · rebaño · valentía</b></p>
+<table><tr><th>Propio</th><th>Común individual</th><th>Común colectivo</th><th>Abstracto</th></tr>
+<tr><td style='height:35px'></td><td></td><td></td><td></td></tr>
+<tr><td style='height:35px'></td><td></td><td></td><td></td></tr>
+<tr><td style='height:35px'></td><td></td><td></td><td></td></tr></table>
+<h2>2. Escribí 2 ejemplos propios de cada tipo de sustantivo</h2>
+<table><tr><th>Tipo</th><th>Ejemplo 1</th><th>Ejemplo 2</th></tr>
+<tr><td>Propio</td><td style='height:32px'></td><td></td></tr>
+<tr><td>Abstracto</td><td style='height:32px'></td><td></td></tr>
+<tr><td>Colectivo</td><td style='height:32px'></td><td></td></tr></table>
+<h2>3. Subrayá los sustantivos en el siguiente texto y clasificalos</h2>
+<p style='background:#f1f5f9;padding:12px;border-radius:6px;line-height:1.8'>"La <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> del grupo llegó a la <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> con mucha <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>."<br>→ Escribí el texto original y marcá los sustantivos:</p>
+<div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 1° Año</footer>
+</body></html>`;
+}
+function generarFicha2(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Verbos</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#1d4ed8;border-bottom:2px solid #1d4ed8;padding-bottom:8px}h2{color:#374151;margin-top:20px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#dbeafe}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📝 Ficha de Trabajo — Conjugación Verbal</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 1° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>1. Completá la tabla de conjugación del verbo CAMINAR</h2>
+<table><tr><th>Persona</th><th>Presente</th><th>Pretérito P. Simple</th><th>Futuro Simple</th></tr>
+<tr><td>Yo</td><td style='height:32px'></td><td></td><td></td></tr>
+<tr><td>Tú / Vos</td><td></td><td></td><td></td></tr>
+<tr><td>Él/Ella</td><td></td><td></td><td></td></tr>
+<tr><td>Nosotros</td><td></td><td></td><td></td></tr>
+<tr><td>Ellos/Ellas</td><td></td><td></td><td></td></tr></table>
+<h2>2. Identificá tiempo, modo y persona</h2>
+<table><tr><th>Forma verbal</th><th>Tiempo</th><th>Modo</th><th>Persona y número</th></tr>
+<tr><td>estudiaban</td><td style='height:32px'></td><td></td><td></td></tr>
+<tr><td>habremos llegado</td><td></td><td></td><td></td></tr>
+<tr><td>¡Escuchá!</td><td></td><td></td><td></td></tr>
+<tr><td>correría</td><td></td><td></td><td></td></tr></table>
+<h2>3. Reescribí las oraciones cambiando el tiempo verbal indicado</h2>
+<p>"Ellos <b>juegan</b> al fútbol." → En Pretérito Perfecto Simple:</p><div class='linea'></div>
+<p>"Yo <b>como</b> en casa." → En Futuro Simple:</p><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 1° Año</footer>
+</body></html>`;
+}
+function generarFicha3(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Pronombres y Verboides</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#7c3aed;border-bottom:2px solid #7c3aed;padding-bottom:8px}h2{color:#374151;margin-top:20px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#ede9fe}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📝 Ficha de Trabajo — Pronombres y Verboides</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 2° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>1. Identificá y clasificá los pronombres</h2>
+<table><tr><th>Oración</th><th>Pronombre</th><th>Tipo</th></tr>
+<tr><td>"Yo llegué tarde."</td><td style='height:32px'></td><td></td></tr>
+<tr><td>"Ese libro es mío."</td><td></td><td></td></tr>
+<tr><td>"¿Quién llamó?"</td><td></td><td></td></tr>
+<tr><td>"Me duele la cabeza."</td><td></td><td></td></tr>
+<tr><td>"Nadie lo sabe."</td><td></td><td></td></tr></table>
+<h2>2. Clasificá los verboides subrayados</h2>
+<table><tr><th>Oración</th><th>Verboide</th><th>Tipo (inf/ger/part)</th><th>Función</th></tr>
+<tr><td>"<u>Estudiar</u> es importante."</td><td style='height:32px'>estudiar</td><td></td><td></td></tr>
+<tr><td>"Llegó <u>corriendo</u>."</td><td>corriendo</td><td></td><td></td></tr>
+<tr><td>"El trabajo <u>terminado</u>."</td><td>terminado</td><td></td><td></td></tr>
+<tr><td>"<u>Habiendo comido</u>, salió."</td><td>habiendo comido</td><td></td><td></td></tr></table>
+<h2>3. Reescribí el párrafo reemplazando los sustantivos subrayados por pronombres</h2>
+<p style='background:#f5f3ff;padding:12px;border-radius:6px'>"<u>María</u> fue al mercado. <u>María</u> compró frutas. <u>Las frutas</u> eran frescas."</p>
+<div class='linea'></div><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 2° Año</footer>
+</body></html>`;
+}
+function generarFicha4(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Adverbios</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#0369a1;border-bottom:2px solid #0369a1;padding-bottom:8px}h2{color:#374151;margin-top:20px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#e0f2fe}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📝 Ficha de Trabajo — Adverbios y Preposiciones</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 3° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>1. Clasificá los adverbios</h2>
+<table><tr><th>Adverbio</th><th>Lugar</th><th>Tiempo</th><th>Modo</th><th>Cantidad</th><th>Afirmación/Negación</th></tr>
+<tr><td>aquí</td><td style='height:30px'>✓</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>nunca</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>lentamente</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>bastante</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>sí</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>afuera</td><td></td><td></td><td></td><td></td><td></td></tr></table>
+<h2>2. Completá con la preposición correcta</h2>
+<p><i>(a · de · en · con · para · por · sin · sobre · hasta · desde)</i></p>
+<p>1. Viajo _____ avión _____ Buenos Aires.</p>
+<p>2. Este regalo es _____ mi mamá.</p>
+<p>3. El libro está _____ la mesa.</p>
+<p>4. Estudio _____ las 8 _____ las 12.</p>
+<p>5. Salió _____ paraguas bajo la lluvia.</p>
+<h2>3. Identificá los recursos de cohesión en el texto</h2>
+<p style='background:#f0f9ff;padding:12px;border-radius:6px;line-height:1.9'>"Lucas compró una bicicleta nueva. <b>El muchacho</b> la pintó de azul. <b>También</b> le cambió las ruedas. <b>Por eso</b> quedó como nueva."</p>
+<p>Recurso en "El muchacho": ____________________</p>
+<p>Recurso en "la": ____________________</p>
+<p>Recurso en "También": ____________________</p>
+<p>Recurso en "Por eso": ____________________</p>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 3° Año</footer>
+</body></html>`;
+}
+function generarFicha5(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Popol Vuh</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#15803d;border-bottom:2px solid #15803d;padding-bottom:8px}h2{color:#374151;margin-top:20px}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#dcfce7}.cita{background:#f0fdf4;border-left:4px solid #15803d;padding:12px 16px;border-radius:0 8px 8px 0;font-style:italic;margin:12px 0;line-height:1.7}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📝 Guía de Análisis Literario — El Popol Vuh</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 4° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>1. Contexto del texto</h2>
+<table><tr><th>Aspecto</th><th>Completá con tus palabras</th></tr>
+<tr><td>Pueblo que lo creó</td><td style='height:30px'></td></tr>
+<tr><td>¿Qué tipo de texto es?</td><td></td></tr>
+<tr><td>¿Cuándo fue transcripto al alfabeto latino?</td><td></td></tr>
+<tr><td>¿Qué temas aborda?</td><td></td></tr>
+<tr><td>¿Por qué es importante para la cultura latinoamericana?</td><td></td></tr></table>
+<h2>2. Leé el fragmento y respondé</h2>
+<div class='cita'>"No había todavía un hombre, ni un animal, pájaros, peces, cangrejos, árboles, piedras, cuevas, barrancas, hierbas ni bosques: sólo el cielo existía. No se manifestaba la faz de la tierra. Sólo estaban el mar en calma y el cielo en toda su extensión."<br><span style='font-size:.8rem;color:#64748b'>(Popol Vuh — Libro del Consejo del Pueblo Quiché)</span></div>
+<p><b>a.</b> ¿Cómo era el mundo antes de la creación según este fragmento?</p><div class='linea'></div><div class='linea'></div>
+<p><b>b.</b> ¿Con qué otros relatos de creación que conocés podés comparar esta descripción?</p><div class='linea'></div><div class='linea'></div>
+<p><b>c.</b> ¿Qué sensación te transmite el texto? ¿Por qué?</p><div class='linea'></div><div class='linea'></div>
+<h2>3. Análisis narrativo</h2>
+<table><tr><th>Elemento</th><th>Identificación en el texto</th></tr>
+<tr><td>¿Quiénes son los creadores en el Popol Vuh?</td><td style='height:32px'></td></tr>
+<tr><td>¿De qué material crean finalmente a los hombres?</td><td></td></tr>
+<tr><td>¿Qué representan los Héroes Gemelos?</td><td></td></tr>
+<tr><td>¿Qué es Xibalbá?</td><td></td></tr>
+<tr><td>¿Qué valores transmite el texto a la comunidad?</td><td></td></tr></table>
+<h2>4. Literatura precolombina y cosmovisión</h2>
+<p>¿En qué se diferencia la visión del mundo que tiene el Popol Vuh de la visión occidental europea? Escribí al menos 3 ideas:</p>
+<div class='linea'></div><div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<h2>5. Reflexión crítica</h2>
+<p>¿Por qué creés que estos textos de los pueblos originarios fueron durante mucho tiempo ignorados o marginados en la educación? ¿Qué importancia tiene leerlos hoy?</p>
+<div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 4° Año</footer>
+</body></html>`;
+}
+function generarFicha6(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - El Matadero</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#b91c1c;border-bottom:2px solid #b91c1c;padding-bottom:8px}h2{color:#374151;margin-top:20px}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#fee2e2}.cita{background:#fff7f7;border-left:4px solid #b91c1c;padding:12px 16px;border-radius:0 8px 8px 0;font-style:italic;margin:12px 0;line-height:1.7}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📝 Guía de Análisis — El Matadero · Esteban Echeverría</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 5° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>1. Contexto histórico y autor</h2>
+<table><tr><th>Aspecto</th><th>Completá</th></tr>
+<tr><td>¿Quién es Esteban Echeverría?</td><td style='height:30px'></td></tr>
+<tr><td>¿En qué época histórica escribió "El Matadero"?</td><td></td></tr>
+<tr><td>¿A qué movimiento literario pertenece?</td><td></td></tr>
+<tr><td>¿Por qué el texto fue publicado de manera póstuma?</td><td></td></tr>
+<tr><td>¿Qué sector político representaba Echeverría?</td><td></td></tr></table>
+<h2>2. Leé el fragmento y respondé</h2>
+<div class='cita'>"En aquel tiempo los carniceros degolladores del Matadero eran los apóstoles que propagaban a verga y puñal la federación rosina, y no es difícil imaginarse qué federación saldría de sus cabezas y cuchillas."<br><span style='font-size:.8rem;color:#64748b'>(El Matadero — Esteban Echeverría)</span></div>
+<p><b>a.</b> ¿A quiénes llama "apóstoles" el narrador? ¿Por qué usa esa palabra?</p><div class='linea'></div><div class='linea'></div>
+<p><b>b.</b> ¿Qué actitud tiene el narrador hacia los personajes que describe?</p><div class='linea'></div><div class='linea'></div>
+<p><b>c.</b> ¿Qué recurso literario usa el autor al comparar a los carniceros con "apóstoles"? ¿Qué efecto logra?</p><div class='linea'></div><div class='linea'></div>
+<h2>3. El matadero como alegoría</h2>
+<p>En la columna derecha, explicá qué representa cada elemento simbólico del relato:</p>
+<table><tr><th>Elemento del relato</th><th>¿Qué simboliza en la realidad política?</th></tr>
+<tr><td>El matadero</td><td style='height:35px'></td></tr>
+<tr><td>Los carniceros y degolladores</td><td></td></tr>
+<tr><td>El joven unitario</td><td></td></tr>
+<tr><td>El toro que escapa</td><td></td></tr>
+<tr><td>La sangre y la violencia</td><td></td></tr></table>
+<h2>4. Análisis narrativo</h2>
+<table><tr><th>Elemento</th><th>Identificación</th></tr>
+<tr><td>Tipo de narrador</td><td style='height:32px'></td></tr>
+<tr><td>Posición ideológica del narrador</td><td></td></tr>
+<tr><td>Conflicto central</td><td></td></tr>
+<tr><td>Clímax del relato</td><td></td></tr>
+<tr><td>Binomio conceptual presente</td><td></td></tr></table>
+<h2>5. Literatura de denuncia: reflexión</h2>
+<p><b>a.</b> ¿Qué injusticia o situación denuncia Echeverría en este texto?</p><div class='linea'></div><div class='linea'></div>
+<p><b>b.</b> ¿Podés relacionar algún aspecto de "El Matadero" con situaciones de injusticia o autoritarismo que conocés de la historia argentina o de la actualidad? ¿Cuál?</p>
+<div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 5° Año</footer>
+</body></html>`;
+}
+function generarFicha7(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Comprensión Lectora 4°</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#0369a1;border-bottom:2px solid #0369a1;padding-bottom:8px}h2{color:#374151;margin-top:22px}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#e0f2fe}.cita{background:#f0f9ff;border-left:4px solid #0369a1;padding:14px 18px;border-radius:0 8px 8px 0;line-height:1.85;margin:14px 0}.guia{background:#fef9c3;border:1px solid #fbbf24;border-radius:8px;padding:10px 14px;font-size:.88rem;margin-bottom:8px;color:#78350f}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📖 Comprensión Lectora — Texto Narrativo · 4° Año</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 4° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>Texto modelo: "El encuentro" (fragmento)</h2>
+<div class='cita'>La tarde caía sobre el monte cuando Rufino vio al forastero. Venía a pie, con las botas llenas de barro y una mochila vieja sobre los hombros. Rufino lo miró desde la tranquera sin moverse. El hombre levantó la mano a modo de saludo.<br><br>"Buenas tardes", dijo. "¿Tiene agua? Camino desde el alba."<br><br>Rufino tardó en responder. En ese monte no llegaban forasteros sin motivo. Y los que llegaban no siempre traían buenas noticias. Pero el agua no se le niega a nadie.<br><br>"Entre", dijo al fin, apartándose de la tranquera. "El pozo está al fondo."<br><br>El hombre bebió largo rato. Después se limpió la boca con el dorso de la mano y miró alrededor: el monte, la casa pequeña, el cielo que empezaba a encenderse de rojo.<br><br>"Bonito lugar", murmuró. "Muy solo, eso sí."<br><br>"Así me gusta", respondió Rufino, y no dijo más.</div>
+<h2>NIVEL 1: Comprensión literal</h2>
+<div class='guia'>💡 Respondé con información que está directamente en el texto.</div>
+<p><b>1.</b> ¿Dónde transcurre la escena? ¿A qué hora del día?</p><div class='linea'></div><div class='linea'></div>
+<p><b>2.</b> ¿Qué pedía el forastero y por qué?</p><div class='linea'></div><div class='linea'></div>
+<p><b>3.</b> ¿Qué hizo Rufino antes de responder al forastero?</p><div class='linea'></div>
+<h2>NIVEL 2: Comprensión inferencial</h2>
+<div class='guia'>💡 Pensá más allá de lo que dice el texto. Usá pistas del relato para inferir lo que no está dicho.</div>
+<p><b>4.</b> ¿Por qué Rufino tardó en responder? ¿Qué nos dice eso de su carácter o de su situación?</p><div class='linea'></div><div class='linea'></div>
+<p><b>5.</b> La frase "los que llegaban no siempre traían buenas noticias" ¿qué sugiere sobre el pasado de Rufino o del lugar donde vive?</p><div class='linea'></div><div class='linea'></div>
+<p><b>6.</b> ¿Qué relación se está construyendo entre los dos personajes? ¿Qué podría pasar en la continuación del relato?</p><div class='linea'></div><div class='linea'></div>
+<h2>NIVEL 3: Comprensión crítica y análisis literario</h2>
+<div class='guia'>💡 Analizá los recursos del texto y expresá tu propia opinión fundamentada.</div>
+<p><b>7.</b> ¿Qué tipo de narrador tiene este fragmento? ¿Cómo influye eso en lo que sabemos de los personajes?</p><div class='linea'></div><div class='linea'></div>
+<p><b>8.</b> El texto describe el cielo que "empezaba a encenderse de rojo". ¿Qué función cumple esa imagen en el relato? ¿Qué podría simbolizar?</p><div class='linea'></div><div class='linea'></div>
+<p><b>9.</b> En pocas palabras, ¿qué tensión crea el autor en este fragmento? ¿Qué recursos usa para crearla?</p><div class='linea'></div><div class='linea'></div>
+<h2>Para pensar y escribir</h2>
+<p>Continuá el relato en 5 a 8 oraciones. Respetá el tono, el espacio y los personajes del texto original.</p>
+<div class='linea'></div><div class='linea'></div><div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 4° Año</footer>
+</body></html>`;
+}
+function generarFicha8(){
+  return `<html><head><meta charset='UTF-8'><title>Ficha - Comprensión Lectora 5°</title><style>body{font-family:Arial,sans-serif;margin:40px;color:#1e293b}h1{color:#7c3aed;border-bottom:2px solid #7c3aed;padding-bottom:8px}h2{color:#374151;margin-top:22px}.linea{border-bottom:1px solid #94a3b8;margin:6px 0;height:28px}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #94a3b8;padding:10px;text-align:left}th{background:#f3e8ff}.cita{background:#faf5ff;border-left:4px solid #7c3aed;padding:14px 18px;border-radius:0 8px 8px 0;line-height:1.85;margin:14px 0}.guia{background:#fef9c3;border:1px solid #fbbf24;border-radius:8px;padding:10px 14px;font-size:.88rem;margin-bottom:8px;color:#78350f}footer{margin-top:40px;font-size:.8rem;color:#64748b;border-top:1px solid #e2e8f0;padding-top:10px}</style></head><body>
+<h1>📖 Comprensión Lectora — Literatura de Denuncia · 5° Año</h1>
+<p><b>Nombre:</b> _______________________________ &nbsp;&nbsp; <b>Año:</b> 5° &nbsp;&nbsp; <b>Fecha:</b> ___________</p>
+<h2>Texto modelo: fragmento de "El Matadero" — Esteban Echeverría</h2>
+<div class='cita'>Era para el carnicero degollador un día de placer. Lo primero que hacía, al entrar al matadero, era dar gracias al Señor y saludar la sagrada efigie del Restaurador con entusiasmo religioso. Luego comenzaba su tarea: de uno en uno los animales caían bajo su cuchillo, y con cada golpe lanzaba una larga risotada que hacía eco en la chusma bulliciosa que lo rodeaba.<br><br>Nadie se atrevía a protestar. El silencio de los demás era una forma de miedo, y el miedo era la única ley que se respetaba en aquel lugar de sangre y grasa, de ruido y de olor a muerte.<br><br>Sólo una vez, un muchacho joven se animó a levantar la voz. Pagó caro su valentía.</div>
+<h2>NIVEL 1: Comprensión literal</h2>
+<div class='guia'>💡 Respondé con información que está directamente en el texto.</div>
+<p><b>1.</b> ¿Qué hacía el carnicero al llegar al matadero?</p><div class='linea'></div><div class='linea'></div>
+<p><b>2.</b> ¿Cómo reaccionaban los demás ante lo que ocurría? ¿Por qué?</p><div class='linea'></div><div class='linea'></div>
+<p><b>3.</b> ¿Qué le pasó al joven que protestó?</p><div class='linea'></div>
+<h2>NIVEL 2: Comprensión inferencial</h2>
+<div class='guia'>💡 Usá el contexto histórico y las pistas del texto para interpretar lo que no está dicho explícitamente.</div>
+<p><b>4.</b> ¿Qué representa "el Restaurador" al que el carnicero saluda? ¿Qué nos dice eso del contexto político?</p><div class='linea'></div><div class='linea'></div>
+<p><b>5.</b> La frase "el miedo era la única ley" ¿qué tipo de sistema político describe? ¿Qué palabras del texto te ayudaron a deducirlo?</p><div class='linea'></div><div class='linea'></div>
+<p><b>6.</b> ¿Por qué Echeverría elige el matadero y no otro lugar para situar su crítica? ¿Qué valor simbólico tiene ese espacio?</p><div class='linea'></div><div class='linea'></div>
+<h2>NIVEL 3: Comprensión crítica</h2>
+<div class='guia'>💡 Reflexioná sobre la intención del autor, los recursos literarios y la vigencia del texto.</div>
+<p><b>7.</b> ¿Qué postura ideológica tiene el narrador? ¿Cómo se nota en el lenguaje que usa?</p><div class='linea'></div><div class='linea'></div>
+<p><b>8.</b> ¿Qué recurso literario se usa cuando los carniceros son llamados "apóstoles"? ¿Qué efecto produce en el lector?</p><div class='linea'></div><div class='linea'></div>
+<p><b>9.</b> ¿Podés relacionar la situación que describe Echeverría con algún hecho histórico argentino más reciente o con situaciones de injusticia que conocés? Explicá brevemente.</p><div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<h2>Escritura crítica personal</h2>
+<p>¿Qué papel creés que tiene la literatura cuando denuncia injusticias? ¿Puede cambiar algo? Escribí tu opinión en al menos 5 oraciones.</p>
+<div class='linea'></div><div class='linea'></div><div class='linea'></div><div class='linea'></div><div class='linea'></div>
+<footer>Escuela 4-264 "Sin Nombre" · Arroyito, Lavalle, Mendoza · Prof. Sandra Agüero · Lengua y Literatura 5° Año</footer>
+</body></html>`;
 }
 
-function elegir(i){sel=i;mostrarQ();}
+// ===== ESTADO =====
+let alumno = {nombre:"", anio:0};
+const PASS_DOCENTE = "sandra2024";
+let docenteLogueado = false;
 
-function nextQ(){
-if(sel===null)return;
-resp.push({q:qAct,t:preguntas[qAct].o[sel].v});
-sel=null;
-if(qAct<preguntas.length-1){qAct++;mostrarQ();}else{mostrarRes();}
+function getKey(n,a){return `lg_${n.toLowerCase().replace(/\s+/g,'_')}_a${a}`;}
+function getProgreso(nombre,anio){
+  try{return JSON.parse(localStorage.getItem(getKey(nombre,anio)))||{};}catch{return {};}
+}
+function setProgreso(nombre,anio,data){
+  localStorage.setItem(getKey(nombre,anio),JSON.stringify(data));
+  guardarRegistroDocente(nombre,anio);
+}
+function guardarRegistroDocente(nombre,anio){
+  const prog = getProgreso(nombre,anio);
+  const actsAnio = ACTIVIDADES[anio].actividades;
+  const total = actsAnio.reduce((s,a)=>s+a.preguntas.length,0);
+  const correctas = Object.values(prog).reduce((s,v)=>s+(v.correctas||0),0);
+  const completadas = actsAnio.filter(a=>prog[a.id]?.completa).length;
+  const pct = total>0?Math.round(correctas/total*100):0;
+  let nota="D";
+  if(pct>=85)nota="A";else if(pct>=70)nota="B";else if(pct>=50)nota="C";
+  const registros = JSON.parse(localStorage.getItem('lg_docente_registros')||'[]');
+  const idx = registros.findIndex(r=>r.nombre===nombre && r.anio===String(anio));
+  const reg = {nombre,anio:String(anio),correctas,total,pct,nota,completadas,totalActs:actsAnio.length,fecha:new Date().toLocaleDateString('es-AR')};
+  if(idx>=0)registros[idx]=reg;else registros.push(reg);
+  localStorage.setItem('lg_docente_registros',JSON.stringify(registros));
 }
 
-function prevQ(){
-if(qAct>0){qAct--;resp.pop();sel=null;mostrarQ();}
+// ===== NAVEGACIÓN =====
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function setNavActive(id){
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  if(id)document.getElementById(id)?.classList.add('active');
 }
 
-function mostrarRes(){
-document.getElementById('testBox').classList.add('hidden');
-document.getElementById('resBox').classList.remove('hidden');
-const s={R:0,I:0,A:0,S:0,E:0,C:0};
-resp.forEach(r=>s[r.t]++);
-let max=0,d='R';
-for(let k in s){if(s[k]>max){max=s[k];d=k;}}
-const p=perfiles[d];
-document.getElementById('resName').innerHTML=p.n;
-document.getElementById('resDesc').innerHTML=p.d;
-let sh="";
-const n={R:'Realista',I:'Investigativo',A:'Artistico',S:'Social',E:'Emprendedor',C:'Convencional'};
-for(let k in s)sh+=`<span style="display:inline-block;background:#f0f7fa;padding:8px 15px;border-radius:8px;margin:4px"><b style="font-size:20px;color:#1a5f7a">${s[k]}</b><br><small>${n[k]}</small></span>`;
-document.getElementById('resScores').innerHTML=sh;
-document.getElementById('resCareers').innerHTML=p.c.map(c=>`<span style="display:inline-block;background:rgba(26,95,122,0.1);color:#1a5f7a;padding:6px 12px;border-radius:15px;margin:4px;font-size:14px">${c}</span>`).join('');
+function mostrarLogin(){
+  showScreen('screenLogin');
+  setNavActive('navLogin');
+}
+function mostrarDocente(){
+  if(docenteLogueado){showScreen('screenDocente');renderDocente();setNavActive(null);}
+  else{showScreen('screenDocenteLogin');setNavActive(null);}
+}
+function cerrarDocente(){docenteLogueado=false;mostrarLogin();}
+
+function iniciarSesion(){
+  const n=document.getElementById('inputNombre').value.trim();
+  const a=parseInt(document.getElementById('inputAnio').value);
+  if(!n||!a){document.getElementById('loginError').style.display='block';return;}
+  alumno={nombre:n,anio:a};
+  document.getElementById('loginError').style.display='none';
+  // Mostrar botones de año y fichas
+  for(let i=1;i<=5;i++){
+    document.getElementById('nav'+i).style.display=(i===a)?'inline-block':'none';
+  }
+  document.getElementById('navFichas').style.display='inline-block';
+  document.getElementById('navLogin').style.display='none';
+  irAAnio(a);
 }
 
-function restartTest(){qAct=0;resp=[];sel=null;document.getElementById('testBox').classList.remove('hidden');document.getElementById('resBox').classList.add('hidden');mostrarQ();}
-
-mostrarQ();
-
-function cvNext(n){for(let i=1;i<=6;i++)document.getElementById('cvStep'+i).classList.add('hidden');document.getElementById('cvStep'+n).classList.remove('hidden');}
-function cvPrev(n){cvNext(n);}
-
-function generarCV(){
-const nom=document.getElementById('cvNombre').value||'Tu Nombre';
-const ciu=document.getElementById('cvCiudad').value;
-const tel=document.getElementById('cvTelefono').value;
-const ema=document.getElementById('cvEmail').value;
-const perf=document.getElementById('cvPerfil').value;
-const esc=document.getElementById('cvEscuela').value;
-const tit=document.getElementById('cvTitulo').value;
-const est=document.getElementById('cvEstudiando').value;
-const cur=document.getElementById('cvCursos').value;
-const e1t=document.getElementById('cvExp1Titulo').value;
-const e1d=document.getElementById('cvExp1Desc').value;
-const e2t=document.getElementById('cvExp2Titulo').value;
-const e2d=document.getElementById('cvExp2Desc').value;
-const otr=document.getElementById('cvOtras').value;
-const r1n=document.getElementById('cvRef1Nom').value;
-const r1c=document.getElementById('cvRef1Cargo').value;
-const r1t=document.getElementById('cvRef1Tel').value;
-const r2n=document.getElementById('cvRef2Nom').value;
-const r2c=document.getElementById('cvRef2Cargo').value;
-const r2t=document.getElementById('cvRef2Tel').value;
-
-const soft=Array.from(document.getElementById('cvSoft').selectedOptions).map(o=>o.value);
-const tech=Array.from(document.getElementById('cvTech').selectedOptions).map(o=>o.value);
-
-let h=`<div style="text-align:center;border-bottom:3px solid #1a5f7a;padding-bottom:15px;margin-bottom:20px"><h2 style="color:#1a5f7a;margin:0">${nom}</h2><p style="color:#666;margin:8px 0;font-size:14px">${[ciu,tel,ema].filter(x=>x).join(' | ')}</p></div>`;
-
-if(perf)h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Perfil Profesional</h4><p style="font-size:14px">${perf}</p></div>`;
-
-if(esc||tit||est||cur){
-h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Formacion Academica</h4><ul style="padding-left:18px;font-size:14px">`;
-if(esc)h+=`<li><b>${esc}</b>${tit?' - '+tit:''}</li>`;
-if(est)h+=`<li>${est}</li>`;
-if(cur)h+=`<li>Cursos: ${cur}</li>`;
-h+=`</ul></div>`;
+function irAAnio(anio){
+  alumno.anio=anio;
+  renderActividades(anio);
+  showScreen('screenActividades');
+  setNavActive('nav'+anio);
 }
 
-if(e1t||e2t){
-h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Experiencia</h4>`;
-if(e1t){h+=`<p style="font-size:14px"><b>${e1t}</b></p>`;if(e1d)h+=`<p style="font-size:14px">${e1d}</p>`;}
-if(e2t){h+=`<p style="font-size:14px;margin-top:8px"><b>${e2t}</b></p>`;if(e2d)h+=`<p style="font-size:14px">${e2d}</p>`;}
-h+=`</div>`;
+function irAFichas(){
+  renderFichas();
+  showScreen('screenFichas');
+  setNavActive('navFichas');
 }
 
-const all=[...soft,...tech];
-if(all.length>0||otr){
-h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Habilidades</h4><ul style="padding-left:18px;font-size:14px">`;
-all.forEach(s=>h+=`<li>${s}</li>`);
-if(otr)h+=`<li>${otr}</li>`;
-h+=`</ul></div>`;
+// ===== RENDER ACTIVIDADES =====
+function renderActividades(anio){
+  const datos = ACTIVIDADES[anio];
+  const prog = getProgreso(alumno.nombre, anio);
+  const container = document.getElementById('actividadesContainer');
+
+  const totalPregs = datos.actividades.reduce((s,a)=>s+a.preguntas.length,0);
+  const totalCorrectas = Object.values(prog).reduce((s,v)=>s+(v.correctas||0),0);
+  const pct = totalPregs>0?Math.round(totalCorrectas/totalPregs*100):0;
+
+  let html = `<div class="year-title">
+    <div>
+      <h2>${datos.titulo}</h2>
+      <div style="font-size:.85rem;opacity:.9;margin-top:4px">${alumno.nombre}</div>
+      <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+    </div>
+    <div class="alumno-badge">✅ ${pct}% completado</div>
+  </div>`;
+
+  datos.actividades.forEach(act=>{
+    const p = prog[act.id]||{};
+    const completa = p.completa||false;
+    html += `<div class="actividad-card ${completa?'completada':''}" id="card_${act.id}">
+      <div class="actividad-header">
+        <span class="actividad-title">${act.titulo}</span>
+        <span class="badge ${completa?'badge-verde':'badge-azul'}">${completa?'✓ Completada':'Pendiente'}</span>
+      </div>
+      <div id="contenido_${act.id}">`;
+
+    act.preguntas.forEach((q,qi)=>{
+      const resp = p.respuestas?.[qi];
+      const respondida = resp!==undefined;
+      const esCorrecta = resp===q.c;
+      html += `<div class="pregunta">
+        <p><b>${qi+1}.</b> ${q.p}</p>
+        <div class="opciones">`;
+      q.ops.forEach((op,oi)=>{
+        let cls='opcion';
+        let dis='';
+        if(respondida){
+          dis='disabled';
+          if(oi===q.c)cls+=' correcta';
+          else if(oi===resp)cls+=' incorrecta';
+        }
+        html+=`<button class="${cls}" ${dis} onclick="responder('${act.id}',${qi},${oi},${q.c},'${anio}')">${op}</button>`;
+      });
+      html+='</div>';
+      if(respondida){
+        html+=`<div class="feedback ${esCorrecta?'ok':'mal'}">${esCorrecta?'✓ ¡Correcto!':'✗ Incorrecto. La respuesta correcta es: '+q.ops[q.c]}</div>`;
+      }
+      html+='</div>';
+    });
+
+    const puntaje = p.correctas||0;
+    const total = act.preguntas.length;
+    html+=`</div>
+      <div class="act-footer">
+        <span class="puntaje-texto">Puntaje: ${puntaje}/${total}</span>
+        ${completa?'<span class="completada-icon">🏆</span>':''}
+      </div>
+    </div>`;
+  });
+
+  container.innerHTML = html;
 }
 
-if(r1n||r2n){
-h+=`<div style="margin-bottom:18px"><h4 style="color:#1a5f7a;text-transform:uppercase;font-size:13px;letter-spacing:1px;margin-bottom:8px">Referencias</h4>`;
-if(r1n)h+=`<p style="font-size:14px"><b>${r1n}</b>${r1c?' - '+r1c:''}${r1t?' | '+r1t:''}</p>`;
-if(r2n)h+=`<p style="font-size:14px"><b>${r2n}</b>${r2c?' - '+r2c:''}${r2t?' | '+r2t:''}</p>`;
-h+=`</div>`;
+function responder(actId, qi, oi, correcto, anio){
+  const prog = getProgreso(alumno.nombre, alumno.anio);
+  if(!prog[actId])prog[actId]={correctas:0,respuestas:{},completa:false};
+  if(prog[actId].respuestas[qi]!==undefined)return;
+  prog[actId].respuestas[qi]=oi;
+  if(oi===correcto)prog[actId].correctas=(prog[actId].correctas||0)+1;
+  const act = ACTIVIDADES[alumno.anio].actividades.find(a=>a.id===actId);
+  const totalResp = Object.keys(prog[actId].respuestas).length;
+  if(totalResp===act.preguntas.length)prog[actId].completa=true;
+  setProgreso(alumno.nombre,alumno.anio,prog);
+  renderActividades(alumno.anio);
 }
 
-document.getElementById('cvPreviewContent').innerHTML=h;
-document.getElementById('cvForm').classList.add('hidden');
-document.getElementById('cvPreviewBox').classList.remove('hidden');
+// ===== FICHAS =====
+function renderFichas(){
+  const fichasGrid = document.getElementById('fichasGrid');
+  const colores=['var(--azul)','#7c3aed','#0369a1','#15803d','#dc2626'];
+  fichasGrid.innerHTML = FICHAS.map((f,i)=>`
+    <div class="ficha-card" style="border-top-color:${colores[i%colores.length]}">
+      <div style="font-size:1.8rem;margin-bottom:8px">📄</div>
+      <div style="font-size:.75rem;font-weight:700;color:${colores[i%colores.length]};margin-bottom:4px">${f.anio}</div>
+      <h3>${f.titulo}</h3>
+      <p>${f.desc}</p>
+      <button class="btn btn-success btn-sm" style="width:100%" onclick="descargarFicha(${i})">⬇ Descargar ficha</button>
+    </div>
+  `).join('');
 }
 
-function descargarCV(){
-const e=document.getElementById('cvPreviewContent');
-const w=window.open('','_blank');
-w.document.write('<html><head><title>Mi CV</title><style>body{font-family:Arial;padding:30px;max-width:650px;margin:0 auto;line-height:1.6}</style></head><body>');
-w.document.write(e.innerHTML);
-w.document.write('</body></html>');
-w.document.close();
-w.print();
+function descargarFicha(idx){
+  const f = FICHAS[idx];
+  const html = f.contenido();
+  const encoded = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
+  const a = document.createElement('a');
+  a.href = encoded;
+  a.download = 'Ficha_' + f.titulo.replace(/[\s\u2014\/]+/g,'_') + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
-function editarCV(){
-document.getElementById('cvForm').classList.remove('hidden');
-document.getElementById('cvPreviewBox').classList.add('hidden');
+// ===== DOCENTE =====
+function verificarPass(){
+  const pass = document.getElementById('passInput').value;
+  if(pass===PASS_DOCENTE){
+    docenteLogueado=true;
+    document.getElementById('passError').style.display='none';
+    showScreen('screenDocente');
+    renderDocente();
+  }else{
+    document.getElementById('passError').style.display='block';
+  }
 }
 
-function reiniciarCV(){
-for(let i=1;i<=6;i++)document.getElementById('cvStep'+i).classList.add('hidden');
-document.getElementById('cvStep1').classList.remove('hidden');
-document.getElementById('cvForm').classList.remove('hidden');
-document.getElementById('cvPreviewBox').classList.add('hidden');
-document.querySelectorAll('#cvForm input, #cvForm textarea').forEach(x=>x.value='');
-document.querySelectorAll('#cvForm select').forEach(x=>Array.from(x.options).forEach(o=>o.selected=false));
+function getRegistros(){
+  return JSON.parse(localStorage.getItem('lg_docente_registros')||'[]');
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-a.addEventListener('click',function(e){
-e.preventDefault();
-document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-});
-});
+function renderDocente(){
+  renderStats();
+  renderTabla();
+}
+
+function renderStats(){
+  const regs = getRegistros();
+  const statsGrid = document.getElementById('statsGrid');
+  const totalAlumnos = new Set(regs.map(r=>r.nombre)).size;
+  const promedio = regs.length?Math.round(regs.reduce((s,r)=>s+r.pct,0)/regs.length):0;
+  const sobresalientes = regs.filter(r=>r.nota==='A').length;
+  const enProceso = regs.filter(r=>r.nota==='D').length;
+  statsGrid.innerHTML=`
+    <div class="stat-card"><div class="stat-num">${totalAlumnos}</div><div class="stat-label">Alumnos registrados</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--verde)">${promedio}%</div><div class="stat-label">Promedio general</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#15803d">${sobresalientes}</div><div class="stat-label">Sobresalientes (A)</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:#dc2626">${enProceso}</div><div class="stat-label">En proceso (D)</div></div>
+  `;
+}
+
+function renderTabla(){
+  let regs = getRegistros();
+  const filtroAnio = document.getElementById('filtroAnio').value;
+  const filtroNota = document.getElementById('filtroNota').value;
+  if(filtroAnio) regs=regs.filter(r=>r.anio===filtroAnio);
+  if(filtroNota) regs=regs.filter(r=>r.nota===filtroNota);
+  regs.sort((a,b)=>b.pct-a.pct);
+  const container = document.getElementById('tablaContainer');
+  if(!regs.length){
+    container.innerHTML=`<div class="empty-state"><div class="icon">📭</div><p>No hay registros de alumnos todavía.<br>Los datos aparecerán aquí cuando los alumnos completen actividades.</p></div>`;
+    return;
+  }
+  container.innerHTML=`<table class="tabla">
+    <thead><tr><th>Alumno/a</th><th>Año</th><th>Correctas</th><th>%</th><th>Actividades</th><th>Nota</th><th>Última actividad</th></tr></thead>
+    <tbody>${regs.map(r=>`<tr>
+      <td><b>${r.nombre}</b></td>
+      <td>${r.anio}°</td>
+      <td>${r.correctas}/${r.total}</td>
+      <td><div style="display:flex;align-items:center;gap:8px"><div style="background:#e2e8f0;border-radius:20px;height:8px;width:70px"><div style="background:var(--azul);height:8px;border-radius:20px;width:${r.pct}%"></div></div>${r.pct}%</div></td>
+      <td>${r.completadas}/${r.totalActs}</td>
+      <td><span class="nota-chip nota-${r.nota.toLowerCase()}">${r.nota}</span></td>
+      <td>${r.fecha}</td>
+    </tr>`).join('')}</tbody>
+  </table>`;
+}
+
+function exportarCSV(){
+  const regs = getRegistros();
+  if(!regs.length){alert('No hay datos para exportar.');return;}
+  const header='Alumno,Año,Correctas,Total,Porcentaje,Nota,Actividades Completadas,Total Actividades,Fecha';
+  const rows = regs.map(r=>`"${r.nombre}",${r.anio},${r.correctas},${r.total},${r.pct}%,${r.nota},${r.completadas},${r.totalActs},${r.fecha}`);
+  const csv = [header,...rows].join('\n');
+  const blob = new Blob([csv],{type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `Avances_Alumnos_${new Date().toLocaleDateString('es-AR').replace(/\//g,'-')}.csv`;
+  a.click();
+}
+
+function exportarTexto(){
+  const regs = getRegistros();
+  if(!regs.length){alert('No hay datos para exportar.');return;}
+  let texto=`REGISTRO DE AVANCES — LENGUA Y LITERATURA\nEscuela 4-264 "Sin Nombre" · Prof. Sandra Agüero\nFecha: ${new Date().toLocaleDateString('es-AR')}\n\n`;
+  regs.forEach(r=>{
+    texto+=`• ${r.nombre} (${r.anio}° Año): ${r.correctas}/${r.total} correctas (${r.pct}%) — Nota: ${r.nota} — ${r.completadas}/${r.totalActs} actividades\n`;
+  });
+  navigator.clipboard.writeText(texto).then(()=>alert('✅ Resumen copiado al portapapeles. Podés pegarlo en WhatsApp o en un documento.'));
+}
+
+function limpiarDatos(){
+  if(confirm('¿Estás segura de que querés limpiar TODOS los registros de avance? Esta acción no se puede deshacer.')){
+    const keys = Object.keys(localStorage).filter(k=>k.startsWith('lg_'));
+    keys.forEach(k=>localStorage.removeItem(k));
+    renderDocente();
+    alert('✅ Datos limpiados.');
+  }
+}
 </script>
 </body>
 </html>
